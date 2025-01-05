@@ -27,6 +27,8 @@ public class Cultivar {
 		return (this.parents[0] == parentCandidates[0] && this.parents[1] == parentCandidates[1]) || (this.parents[0] == parentCandidates[1] && this.parents[1] == parentCandidates[0]);
 	}
 
+	public float getFrequency() { return this.frequency; }
+
 	@Override
 	public String toString() {
 		return String.format("%s + %s = %s", parents[0].getName().getString(), parents[1].getName().getString(), child.getName().getString());

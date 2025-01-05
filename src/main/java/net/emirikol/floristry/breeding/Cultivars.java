@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Cultivars {
@@ -17,10 +19,15 @@ public class Cultivars {
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
-		return new ArrayList<Cultivar>() {{
+		List<Cultivar> output = new ArrayList<Cultivar>() {{
 			for (Cultivar cultivar: CULTIVARS) {
 				if (cultivar.isMatch(parents)) { add(cultivar); }
 			}
 		}};
+
+		// Sort and then reverse the list to arrange in descending order of frequency.
+		output.sort(Comparator.comparing(Cultivar::getFrequency));
+		Collections.reverse(output);
+		return output;
 	}
 }
