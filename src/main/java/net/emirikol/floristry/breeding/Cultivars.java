@@ -17,10 +17,10 @@ public class Cultivars {
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
-		List<Cultivar> output = new ArrayList<Cultivar>();
-		for (Cultivar cultivar : CULTIVARS) {
-			if (cultivar.isMatch(parents)) { output.add(cultivar); }
-		}
-		return output;
+		return new ArrayList<Cultivar>() {{
+			for (Cultivar cultivar: CULTIVARS) {
+				if (cultivar.isMatch(parents)) { add(cultivar); }
+			}
+		}};
 	}
 }
