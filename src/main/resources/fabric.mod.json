@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "floristry,
+	"id": "floristry",
 	"version": "${version}",
 	"name": "Floristry",
 	"description": "WIP!",
