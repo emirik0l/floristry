@@ -24,9 +24,11 @@ public class Cultivar {
 	}
 
 	public boolean isMatch(Block[] parentCandidates) {
-		Block[] sortedParents = this.parents.clone();
-		Arrays.sort(sortedParents);
-		Arrays.sort(parentCandidates);
-		return Arrays.equals(sortedParents, parentCandidates);
+		return (this.parents[0] == parentCandidates[0] && this.parents[1] == parentCandidates[1]) || (this.parents[0] == parentCandidates[1] && this.parents[1] == parentCandidates[0]);
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%s + %s = %s", parents[0].getName().getString(), parents[1].getName().getString(), child.getName().getString());
 	}
 }

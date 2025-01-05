@@ -1,6 +1,8 @@
 package net.emirikol.floristry.mixin;
 
 import net.emirikol.floristry.FloristryMod;
+import net.emirikol.floristry.breeding.Cultivar;
+import net.emirikol.floristry.breeding.Cultivars;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.passive.BeeEntity;
@@ -28,27 +30,36 @@ public abstract class PollinateGoalMixin {
 
 	@Inject(method = "stop", at = @At("TAIL"), cancellable = true)
 	private void stopPollinating(CallbackInfo info) {
-		Optional<Block> donor = this.getPollenDonor();
+		BlockPos flowerPos = beeEntity.getFlowerPos();
+		if (flowerPos == null) { return; }
+
+		Optional<Block> donor = this.getPollenDonor(flowerPos);
 		if (donor.isPresent()) {
-			FloristryMod.LOGGER.info("A bee successfully got pollen from: " + donor.get().getName().getString());
-			List<Block> nearbyFlowers = this.getNearbyFlowers();
-			for (Block nearbyFlower : nearbyFlowers) {
-				FloristryMod.LOGGER.info("\tNearby flower: " + nearbyFlower.getName().getString());
+			List<Cultivar> candidates = new ArrayList<>();
+			// Iterate through nearby flowers to identify potential cultivars that could produce children.
+			for (Block nearbyFlower : this.getNearbyFlowers(flowerPos)) {
+				Block[] candidateParents = {donor.get(), nearbyFlower};
+				List<Cultivar> candidateMatches = Cultivars.getMatches(candidateParents);
+				candidates.addAll(candidateMatches);
 			}
+
+			for (Cultivar c : candidates) {
+				FloristryMod.LOGGER.info("Potential cultivar: " + c.toString());
+			}
+			//FloristryMod.LOGGER.info("A bee successfully got pollen from: " + donor.get().getName().getString());
 		}
 	}
 
-	public Optional<Block> getPollenDonor() {
-		BlockPos flowerPos = beeEntity.getFlowerPos();
-		if (flowerPos == null || !this.completedPollination()) { return Optional.empty(); }
-		return Optional.of(beeEntity.getWorld().getBlockState(flowerPos).getBlock());
+	public Optional<Block> getPollenDonor(BlockPos pos) {
+		if (!this.completedPollination()) { return Optional.empty(); }
+		return Optional.of(beeEntity.getWorld().getBlockState(pos).getBlock());
 	}
 
-	public List<Block> getNearbyFlowers() {
+	public List<Block> getNearbyFlowers(BlockPos pos) {
 		List<Block> output = new ArrayList<>();
-		Iterable<BlockPos> iterable = BlockPos.iterateOutwards(beeEntity.getBlockPos(), FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE);
-		for (BlockPos pos : iterable) {
-			BlockState blockState = beeEntity.getWorld().getBlockState(pos);
+		Iterable<BlockPos> iterable = BlockPos.iterateOutwards(pos, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE);
+		for (BlockPos curPos : iterable) {
+			BlockState blockState = beeEntity.getWorld().getBlockState(curPos);
 			if (BeeEntity.isAttractive(blockState)) {
 				output.add(blockState.getBlock());
 			}
