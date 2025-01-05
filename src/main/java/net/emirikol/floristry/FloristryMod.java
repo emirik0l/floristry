@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class FloristryMod implements ModInitializer {
 	public static final String MOD_ID = "floristry";
+	public static final int FLOWER_PLACE_RANGE = 5;
 	public static final int FLOWER_SCAN_RANGE = 5;
 
 	// This logger is used to write text to the console and the log file.

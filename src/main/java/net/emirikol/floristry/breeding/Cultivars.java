@@ -7,8 +7,8 @@ import java.util.*;
 
 public class Cultivars {
 	// Vanilla flower breeding.
-	public static final Cultivar POPPY = new Cultivar(Blocks.POPPY, Blocks.POPPY, Blocks.POPPY, 0.10f);
-	public static final Cultivar ROSE_BUSH = new Cultivar(Blocks.ROSE_BUSH, Blocks.ROSE_BUSH, Blocks.ROSE_BUSH, 0.10f);
+	public static final Cultivar POPPY = new Cultivar(Blocks.POPPY, Blocks.POPPY, Blocks.POPPY, 0.25f);
+	public static final Cultivar ROSE_BUSH = new Cultivar(Blocks.ROSE_BUSH, Blocks.ROSE_BUSH, Blocks.ROSE_BUSH, 0.25f);
 
 	public static final List<Cultivar> CULTIVARS = new ArrayList<Cultivar>() {{
 		add(POPPY);

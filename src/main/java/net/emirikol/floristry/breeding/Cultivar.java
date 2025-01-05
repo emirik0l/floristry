@@ -27,6 +27,7 @@ public class Cultivar {
 		return (this.parents[0] == parentCandidates[0] && this.parents[1] == parentCandidates[1]) || (this.parents[0] == parentCandidates[1] && this.parents[1] == parentCandidates[0]);
 	}
 
+	public Block getChild() { return this.child; }
 	public float getFrequency() { return this.frequency; }
 
 	@Override

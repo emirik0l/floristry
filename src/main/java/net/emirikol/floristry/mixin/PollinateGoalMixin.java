@@ -6,6 +6,7 @@ import net.emirikol.floristry.breeding.Cultivars;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.passive.BeeEntity;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -46,8 +47,7 @@ public abstract class PollinateGoalMixin {
 			Optional<Cultivar> breedingResult = Cultivars.breedingRoll(new ArrayList<>(candidates));
 			if (breedingResult.isPresent()) {
 				Cultivar cultivar = breedingResult.get();
-				FloristryMod.LOGGER.info("Successful breeding: " + cultivar.toString());
-				// TODO - spawning logic
+				this.attemptFlowerPlacement(flowerPos, cultivar);
 			}
 		}
 	}
@@ -67,5 +67,27 @@ public abstract class PollinateGoalMixin {
 			}
 		}
 		return output;
+	}
+
+	public void attemptFlowerPlacement(BlockPos startPos, Cultivar cultivar) {
+		Iterable<BlockPos> iterable = BlockPos.iterateOutwards(startPos, FloristryMod.FLOWER_PLACE_RANGE, FloristryMod.FLOWER_PLACE_RANGE, FloristryMod.FLOWER_PLACE_RANGE);
+		for (BlockPos curPos : iterable) {
+			BlockState blockState = beeEntity.getWorld().getBlockState(curPos);
+			if (this.isValidPlacementBlock(curPos, blockState)) {
+				BlockState childBlockState = cultivar.getChild().getDefaultState();
+				beeEntity.getWorld().setBlockState(curPos.up(), childBlockState);
+				return;
+			}
+		}
+	}
+
+	public boolean isValidPlacementBlock(BlockPos pos, BlockState blockState) {
+		boolean isDirt = blockState.isIn(BlockTags.DIRT);
+
+		BlockState upOne = beeEntity.getWorld().getBlockState(pos.up(1));
+		BlockState upTwo = beeEntity.getWorld().getBlockState(pos.up(2));
+		boolean hasSpace = upOne.isAir() && upTwo.isAir();
+
+		return isDirt && hasSpace;
 	}
 }
