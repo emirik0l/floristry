@@ -14,9 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Mixin(targets = "net.minecraft.entity.passive.BeeEntity$PollinateGoal")
 public abstract class PollinateGoalMixin {
@@ -35,8 +33,9 @@ public abstract class PollinateGoalMixin {
 
 		Optional<Block> donor = this.getPollenDonor(flowerPos);
 		if (donor.isPresent()) {
-			List<Cultivar> candidates = new ArrayList<>();
 			// Iterate through nearby flowers to identify potential cultivars that could produce children.
+			// We use a set so that each cultivar is only rolled for once (spamming flowers does nothing).
+			Set<Cultivar> candidates = new HashSet<>();
 			for (Block nearbyFlower : this.getNearbyFlowers(flowerPos)) {
 				Block[] candidateParents = {donor.get(), nearbyFlower};
 				List<Cultivar> candidateMatches = Cultivars.getMatches(candidateParents);
@@ -44,7 +43,7 @@ public abstract class PollinateGoalMixin {
 			}
 
 			// Attempt breeding with established candidates.
-			Optional<Cultivar> breedingResult = Cultivars.breedingRoll(candidates);
+			Optional<Cultivar> breedingResult = Cultivars.breedingRoll(new ArrayList<>(candidates));
 			if (breedingResult.isPresent()) {
 				Cultivar cultivar = breedingResult.get();
 				FloristryMod.LOGGER.info("Successful breeding: " + cultivar.toString());
