@@ -23,7 +23,10 @@ public class Cultivar {
 		return rand.nextFloat() <= this.frequency;
 	}
 
-	public boolean isMatch(Block[] parents) {
-		return (this.parents[0] == parents[0] && this.parents[1] == parents[1]) || (this.parents[0] == parents[1] && this.parents[1] == parents[0]);
+	public boolean isMatch(Block[] parentCandidates) {
+		Block[] sortedParents = this.parents.clone();
+		Arrays.sort(sortedParents);
+		Arrays.sort(parentCandidates);
+		return Arrays.equals(sortedParents, parentCandidates);
 	}
 }
