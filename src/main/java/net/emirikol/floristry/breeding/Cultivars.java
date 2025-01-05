@@ -3,10 +3,7 @@ package net.emirikol.floristry.breeding;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Cultivars {
 	// Vanilla flower breeding.
@@ -19,15 +16,26 @@ public class Cultivars {
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
-		List<Cultivar> output = new ArrayList<Cultivar>() {{
+		return new ArrayList<Cultivar>() {{
 			for (Cultivar cultivar: CULTIVARS) {
 				if (cultivar.isMatch(parents)) { add(cultivar); }
 			}
 		}};
+	}
+
+	public static Optional<Cultivar> breedingRoll(List<Cultivar> candidates) {
+		Random rand = new Random();
 
 		// Sort and then reverse the list to arrange in descending order of frequency.
-		output.sort(Comparator.comparing(Cultivar::getFrequency));
-		Collections.reverse(output);
-		return output;
+		candidates.sort(Comparator.comparing(Cultivar::getFrequency));
+		Collections.reverse(candidates);
+
+		// Iterate through candidates until one returns a hit.
+		for (Cultivar candidate : candidates) {
+			if (rand.nextFloat() <= candidate.getFrequency()) { return Optional.of(candidate); }
+		}
+
+		// If no hits, return nothing.
+		return Optional.empty();
 	}
 }

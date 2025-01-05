@@ -43,10 +43,13 @@ public abstract class PollinateGoalMixin {
 				candidates.addAll(candidateMatches);
 			}
 
-			for (Cultivar c : candidates) {
-				FloristryMod.LOGGER.info("Potential cultivar: " + c.toString());
+			// Attempt breeding with established candidates.
+			Optional<Cultivar> breedingResult = Cultivars.breedingRoll(candidates);
+			if (breedingResult.isPresent()) {
+				Cultivar cultivar = breedingResult.get();
+				FloristryMod.LOGGER.info("Successful breeding: " + cultivar.toString());
+				// TODO - spawning logic
 			}
-			//FloristryMod.LOGGER.info("A bee successfully got pollen from: " + donor.get().getName().getString());
 		}
 	}
 
