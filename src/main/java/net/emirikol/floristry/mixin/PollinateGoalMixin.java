@@ -5,6 +5,9 @@ import net.emirikol.floristry.breeding.Cultivar;
 import net.emirikol.floristry.breeding.Cultivars;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.block.TallPlantBlock;
+import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.passive.BeeEntity;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
@@ -16,6 +19,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.*;
+
+import static net.minecraft.block.TallPlantBlock.HALF;
 
 @Mixin(targets = "net.minecraft.entity.passive.BeeEntity$PollinateGoal")
 public abstract class PollinateGoalMixin {
@@ -74,9 +79,21 @@ public abstract class PollinateGoalMixin {
 		for (BlockPos curPos : iterable) {
 			BlockState blockState = beeEntity.getWorld().getBlockState(curPos);
 			if (this.isValidPlacementBlock(curPos, blockState)) {
-				BlockState childBlockState = cultivar.getChild().getDefaultState();
-				beeEntity.getWorld().setBlockState(curPos.up(), childBlockState);
-				return;
+				Block child = cultivar.getChild();
+				if (child instanceof TallPlantBlock tallChild) {
+					FloristryMod.LOGGER.info("Tall Plant!"); //TODO
+					BlockState lowerBlockState = tallChild.getDefaultState().with(HALF, DoubleBlockHalf.LOWER);
+					BlockState upperBlockState = tallChild.getDefaultState().with(HALF, DoubleBlockHalf.UPPER);
+					beeEntity.getWorld().setBlockState(curPos.up(1), lowerBlockState);
+					beeEntity.getWorld().setBlockState(curPos.up(2), upperBlockState);
+					return;
+ 				}
+				if (child instanceof PlantBlock) {
+					FloristryMod.LOGGER.info("Normal Plant!"); //TODO
+					BlockState childBlockState = child.getDefaultState();
+					beeEntity.getWorld().setBlockState(curPos.up(), childBlockState);
+					return;
+				}
 			}
 		}
 	}
