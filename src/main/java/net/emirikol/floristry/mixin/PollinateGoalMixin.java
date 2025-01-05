@@ -15,12 +15,14 @@ public abstract class PollinateGoalMixin {
 	@Shadow private BeeEntity field_20377;
 	private BeeEntity beeEntity = field_20377;
 
+	@Shadow protected abstract boolean completedPollination();
+
 	@Inject(method = "stop", at = @At("TAIL"), cancellable = true)
 	private void stopPollinating(CallbackInfo info) {
 		BlockPos flowerPos = beeEntity.getFlowerPos();
-		if (flowerPos != null) {
+		if (flowerPos != null && this.completedPollination()) {
 			BlockState blockState = beeEntity.getWorld().getBlockState(flowerPos);
-			FloristryMod.LOGGER.info("A bee stopped pollinating a " + blockState.toString() + "!");
+			FloristryMod.LOGGER.info("A bee successfully got pollen from: " + blockState.toString());
 		}
 	}
 }
