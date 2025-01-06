@@ -3,13 +3,13 @@
 	"id": "floristry",
 	"version": "${version}",
 	"name": "Floristry",
-	"description": "WIP!",
+	"description": "A mod about bees and breeding, but not like that. ",
 	"authors": [
 		"Emirikol"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/emirik0l/floristry",
+		"sources": "https://github.com/emirik0l/floristry"
 	},
 	"license": "LGPL-2.1",
 	"icon": "assets/floristry/icon.png",
