@@ -1,5 +1,6 @@
 package net.emirikol.floristry.mixin;
 
+import it.unimi.dsi.fastutil.floats.Float2ReferenceOpenCustomHashMap;
 import net.emirikol.floristry.FloristryMod;
 import net.emirikol.floristry.breeding.Cultivar;
 import net.emirikol.floristry.breeding.Cultivars;
@@ -39,6 +40,8 @@ public abstract class PollinateGoalMixin {
 
 		Optional<Block> donor = this.getPollenDonor(flowerPos);
 		if (donor.isPresent()) {
+			FloristryMod.logInfo("Bee got pollen from a " + donor.get().getName().getString());
+
 			// Iterate through nearby flowers to identify potential cultivars that could produce children.
 			// We use a set so that each cultivar is only rolled for once (spamming flowers does nothing).
 			Set<Cultivar> candidates = new HashSet<>();
@@ -52,6 +55,7 @@ public abstract class PollinateGoalMixin {
 			Optional<Cultivar> breedingResult = Cultivars.breedingRoll(new ArrayList<>(candidates));
 			if (breedingResult.isPresent()) {
 				Cultivar cultivar = breedingResult.get();
+				FloristryMod.logInfo("Breeding successful! Cultivar: " + cultivar.toString());
 				this.attemptFlowerPlacement(flowerPos, cultivar);
 			}
 		}
@@ -81,7 +85,7 @@ public abstract class PollinateGoalMixin {
 			if (this.isValidPlacementBlock(curPos, blockState)) {
 				Block child = cultivar.getChild();
 				if (child instanceof TallPlantBlock tallChild) {
-					FloristryMod.LOGGER.info("Tall Plant!"); //TODO
+					FloristryMod.logInfo("Placing a tall plant: " + child.getName().getString());
 					BlockState lowerBlockState = tallChild.getDefaultState().with(HALF, DoubleBlockHalf.LOWER);
 					BlockState upperBlockState = tallChild.getDefaultState().with(HALF, DoubleBlockHalf.UPPER);
 					beeEntity.getWorld().setBlockState(curPos.up(1), lowerBlockState);
@@ -89,7 +93,7 @@ public abstract class PollinateGoalMixin {
 					return;
  				}
 				if (child instanceof PlantBlock) {
-					FloristryMod.LOGGER.info("Normal Plant!"); //TODO
+					FloristryMod.logInfo("Placing a normal plant: " + child.getName().getString());
 					BlockState childBlockState = child.getDefaultState();
 					beeEntity.getWorld().setBlockState(curPos.up(), childBlockState);
 					return;
