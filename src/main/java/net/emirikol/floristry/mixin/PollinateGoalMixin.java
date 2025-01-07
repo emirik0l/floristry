@@ -1,6 +1,5 @@
 package net.emirikol.floristry.mixin;
 
-import it.unimi.dsi.fastutil.floats.Float2ReferenceOpenCustomHashMap;
 import net.emirikol.floristry.FloristryMod;
 import net.emirikol.floristry.breeding.Cultivar;
 import net.emirikol.floristry.breeding.Cultivars;
@@ -66,16 +65,26 @@ public abstract class PollinateGoalMixin {
 		return Optional.of(beeEntity.getWorld().getBlockState(pos).getBlock());
 	}
 
-	public List<Block> getNearbyFlowers(BlockPos pos) {
+	public List<Block> getNearbyFlowers(BlockPos startPos) {
 		List<Block> output = new ArrayList<>();
-		Iterable<BlockPos> iterable = BlockPos.iterateOutwards(pos, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE);
+		Iterable<BlockPos> iterable = BlockPos.iterateOutwards(startPos, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE, FloristryMod.FLOWER_SCAN_RANGE);
 		for (BlockPos curPos : iterable) {
+			// Self-loving is not permitted.
+			if (areSameFlower(curPos, startPos)) { continue; }
+
 			BlockState blockState = beeEntity.getWorld().getBlockState(curPos);
 			if (BeeEntity.isAttractive(blockState)) {
 				output.add(blockState.getBlock());
 			}
 		}
 		return output;
+	}
+
+	public boolean areSameFlower(BlockPos left, BlockPos right) {
+		boolean samePos = left.equals(right);
+		boolean tallPlant = left.up().equals(right) || right.up().equals(left);
+
+		return samePos || tallPlant;
 	}
 
 	public void attemptFlowerPlacement(BlockPos startPos, Cultivar cultivar) {
