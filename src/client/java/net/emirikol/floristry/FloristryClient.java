@@ -8,6 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 public class FloristryClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.HERMIT_PURPLE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.WITHER_BUSH, RenderLayer.getCutout());
 	}
 }
