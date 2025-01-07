@@ -9,10 +9,10 @@ import java.util.*;
 public class Cultivars {
 	// Chances for vanilla flowers to propagate.
 	private static final float VANILLA_COMMON = 0.25f;
-	private static final float VANILLA_RARE = 0.15f;
+	private static final float VANILLA_RARE = 0.20f;
 
 	// Chance for "special" flowers to propagate.
-	private static final float SPECIAL_PROPAGATE = 0.15f;
+	private static final float SPECIAL_PROPAGATE = 0.20f;
 
 	// Chances for "special" flowers to mutate, according to tier.
 	private static final float T1_MUTATE = 0.20f;
