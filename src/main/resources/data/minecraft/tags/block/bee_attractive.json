@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "floristry:hermit_purple",
     "floristry:wither_bush"
   ]
 }

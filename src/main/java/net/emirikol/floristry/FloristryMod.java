@@ -28,8 +28,10 @@ public class FloristryMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registries.BLOCK, FloristryBlocks.HERMIT_PURPLE_ID, FloristryBlocks.HERMIT_PURPLE);
 		Registry.register(Registries.BLOCK, FloristryBlocks.WITHER_BUSH_ID, FloristryBlocks.WITHER_BUSH);
 
+		Registry.register(Registries.ITEM, FloristryBlocks.HERMIT_PURPLE_ID, FloristryItems.HERMIT_PURPLE_ITEM);
 		Registry.register(Registries.ITEM, FloristryBlocks.WITHER_BUSH_ID, FloristryItems.WITHER_BUSH_ITEM);
 	}
 }
