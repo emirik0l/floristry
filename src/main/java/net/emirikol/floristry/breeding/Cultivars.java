@@ -43,8 +43,17 @@ public class Cultivars {
 	public static final Cultivar WITHER_ROSE = new Cultivar(Blocks.WITHER_ROSE, Blocks.WITHER_ROSE, Blocks.WITHER_ROSE, VANILLA_RARE);
 
 	// Tier 1 flower breeding.
-	public static final Cultivar WITHER_BUSH_MUTATE = new Cultivar(Blocks.WITHER_ROSE, Blocks.ROSE_BUSH, FloristryBlocks.WITHER_BUSH, T1_MUTATE);
-	public static final Cultivar WITHER_BUSH_PROPAGATE = new Cultivar(FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, SPECIAL_PROPAGATE);
+	public static final Cultivar[] HERMIT_PURPLE = {
+			new Cultivar(Blocks.POPPY, Blocks.CORNFLOWER, FloristryBlocks.HERMIT_PURPLE, T1_MUTATE),
+			new Cultivar(Blocks.RED_TULIP, Blocks.CORNFLOWER, FloristryBlocks.HERMIT_PURPLE, T1_MUTATE),
+			new Cultivar(Blocks.ROSE_BUSH, Blocks.CORNFLOWER, FloristryBlocks.HERMIT_PURPLE, T1_MUTATE),
+			new Cultivar(FloristryBlocks.HERMIT_PURPLE, FloristryBlocks.HERMIT_PURPLE, FloristryBlocks.HERMIT_PURPLE, SPECIAL_PROPAGATE)
+	};
+
+	public static final Cultivar[] WITHER_BUSH = {
+			new Cultivar(Blocks.WITHER_ROSE, Blocks.ROSE_BUSH, FloristryBlocks.WITHER_BUSH, T1_MUTATE),
+			new Cultivar(FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, SPECIAL_PROPAGATE)
+	};
 
 	//Tier 2 flower breeding.
 	// TODO
@@ -77,8 +86,8 @@ public class Cultivars {
 		add(WHITE_TULIP);
 		add(WITHER_ROSE);
 
-		add(WITHER_BUSH_MUTATE);
-		add(WITHER_BUSH_PROPAGATE);
+		addAll(List.of(HERMIT_PURPLE));
+		addAll(List.of(WITHER_BUSH));
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
