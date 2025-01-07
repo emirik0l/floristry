@@ -1,5 +1,6 @@
 package net.emirikol.floristry.breeding;
 
+import net.emirikol.floristry.block.FloristryBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
@@ -40,7 +41,8 @@ public class Cultivars {
 	public static final Cultivar WITHER_ROSE = new Cultivar(Blocks.WITHER_ROSE, Blocks.WITHER_ROSE, Blocks.WITHER_ROSE, VANILLA_RARE);
 
 	// Tier 1 flower breeding.
-	// TODO
+	public static final Cultivar WITHER_BUSH_MUTATE = new Cultivar(Blocks.WITHER_ROSE, Blocks.ROSE_BUSH, FloristryBlocks.WITHER_BUSH, T1_MUTATE);
+	public static final Cultivar WITHER_BUSH_PROPAGATE = new Cultivar(FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, FloristryBlocks.WITHER_BUSH, SPECIAL_PROPAGATE);
 
 	//Tier 2 flower breeding.
 	// TODO
@@ -70,6 +72,9 @@ public class Cultivars {
 		add(TORCHFLOWER);
 		add(WHITE_TULIP);
 		add(WITHER_ROSE);
+
+		add(WITHER_BUSH_MUTATE);
+		add(WITHER_BUSH_PROPAGATE);
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
