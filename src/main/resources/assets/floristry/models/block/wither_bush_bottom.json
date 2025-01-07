@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "floristry:block/wither_bush_bottom"
+  }
+}

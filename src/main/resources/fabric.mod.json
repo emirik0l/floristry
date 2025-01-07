@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.emirikol.floristry.FloristryMod"
+		],
+		"client": [
+			"net.emirikol.floristry.FloristryClient"
 		]
 	},
 	"mixins": [
