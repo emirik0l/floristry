@@ -1,7 +1,11 @@
 package net.emirikol.floristry;
 
+import net.emirikol.floristry.block.FloristryBlocks;
+import net.emirikol.floristry.item.FloristryItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,5 +28,8 @@ public class FloristryMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registries.BLOCK, FloristryBlocks.WITHER_BUSH_ID, FloristryBlocks.WITHER_BUSH);
+
+		Registry.register(Registries.ITEM, FloristryBlocks.WITHER_BUSH_ID, FloristryItems.WITHER_BUSH_ITEM);
 	}
 }
