@@ -8,7 +8,7 @@ Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/For
 
 ## Current Features
 
-When vanilla flowers are pollinated by a bee, there's a chance for them to spread.
+When two vanilla flowers are nearby and one gets pollinated by a bee, there's a chance for them to spread. In some cases, they might mutate into a new flower entirely.
 
 Tier 1 flowers (decorative only):
 
