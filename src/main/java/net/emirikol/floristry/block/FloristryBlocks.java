@@ -18,7 +18,15 @@ public class FloristryBlocks {
 	public static RegistryKey<Block> MOONFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, MOONFLOWER_ID);
 	public static RegistryKey<Block> WITHER_BUSH_KEY = RegistryKey.of(RegistryKeys.BLOCK, WITHER_BUSH_ID);
 
-	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, AbstractBlock.Settings.create().registryKey(HERMIT_PURPLE_KEY).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY));
-	public static TallFlowerBlock MOONFLOWER = new TallFlowerBlock(AbstractBlock.Settings.create().registryKey(MOONFLOWER_KEY).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).burnable().pistonBehavior(PistonBehavior.DESTROY));
-	public static WitherBushBlock WITHER_BUSH = new WitherBushBlock(AbstractBlock.Settings.create().registryKey(WITHER_BUSH_KEY).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).burnable().pistonBehavior(PistonBehavior.DESTROY));
+	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(HERMIT_PURPLE_KEY));
+	public static TallFlowerBlock MOONFLOWER = new TallFlowerBlock(createTallFlowerBlockSettings(MOONFLOWER_KEY));
+	public static WitherBushBlock WITHER_BUSH = new WitherBushBlock(createTallFlowerBlockSettings(WITHER_BUSH_KEY));
+
+	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
+		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY);
+	}
+
+	public static Block.Settings createTallFlowerBlockSettings(RegistryKey<Block> key) {
+		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).burnable().pistonBehavior(PistonBehavior.DESTROY);
+	}
 }
