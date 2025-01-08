@@ -8,9 +8,13 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class FloristryBlocks {
+	// Flowers
 	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.HERMIT_PURPLE_KEY));
 	public static TallFlowerBlock MOONFLOWER = new TallFlowerBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.MOONFLOWER_KEY));
 	public static WitherBushBlock WITHER_BUSH = new WitherBushBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.WITHER_BUSH_KEY));
+
+	// Flowerpots
+	public static FlowerPotBlock POTTED_HERMIT_PURPLE = new FlowerPotBlock(HERMIT_PURPLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HERMIT_PURPLE_KEY));
 
 	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
 		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY);
@@ -18,5 +22,9 @@ public class FloristryBlocks {
 
 	public static Block.Settings createTallFlowerBlockSettings(RegistryKey<Block> key) {
 		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).burnable().pistonBehavior(PistonBehavior.DESTROY);
+	}
+
+	public static Block.Settings createFlowerPotSettings(RegistryKey<Block> key) {
+		return Blocks.createFlowerPotSettings().registryKey(key);
 	}
 }
