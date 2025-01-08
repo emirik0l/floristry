@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "floristry:block/moonflower_bottom"
+    },
+    "half=upper": {
+      "model": "floristry:block/moonflower_top"
+    }
+  }
+}
