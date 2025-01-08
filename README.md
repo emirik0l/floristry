@@ -4,12 +4,20 @@ Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/For
 
 **This mod is in a very early stage!**
 
-Currently, this mod adds the following:
+![a few special flowers](/readme/flowers.png)
 
-- When vanilla flowers are pollinated by a bee, there's a chance for them to spread.
-- You can cross-breed a rose bush and a wither rose to get a wither bush, the first example of a tier 1 flower.
+## Current Features
+
+When vanilla flowers are pollinated by a bee, there's a chance for them to spread.
+
+Tier 1 flowers (decorative only):
+
+- Rose Bush + Wither Rose = Wither Bush
+- Cornflower + (Any Red Flower) = Hermit Purple
+- Sunflower + Open Eyeblossom = Moonflower
 
 Planned for the future:
 
-- 4 tiers of special flowers that can only be obtained by cross-breeding. Higher tiers of special flowers have unique effects.
-- Special honey which can be made by bees when they gather nectar from special flowers.
+- About 10 Tier 1 flowers.
+- 3 more tiers of special flowers that can only be obtained by cross-breeding. Higher tiers of special flowers have unique effects.
+- Special honey which can be made by bees when they gather nectar from special flowers. It has much more concentrated effects compared to the flowers.
