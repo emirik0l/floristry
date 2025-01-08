@@ -10,11 +10,17 @@ public class Cultivar {
 	private Block child;
 	private float frequency;
 
+	// Constructor for mutation.
 	public Cultivar(Block left, Block right, Block child, float frequency) {
-		this.parents = new Block[2];
-		this.parents[0] = left;
-		this.parents[1] = right;
+		this.parents = new Block[]{left, right};
 		this.child = child;
+		this.frequency = frequency;
+	}
+
+	// Constructor for propagation.
+	public Cultivar(Block propagate, float frequency) {
+		this.parents = new Block[]{propagate, propagate};
+		this.child = propagate;
 		this.frequency = frequency;
 	}
 
