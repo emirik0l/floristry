@@ -15,6 +15,9 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Block> MOONFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.MOONFLOWER_ID);
 	public static RegistryKey<Block> WITHER_BUSH_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.WITHER_BUSH_ID);
 
+	public static RegistryKey<Block> POTTED_BRANDFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BRANDFLOWER_ID);
+	public static RegistryKey<Block> POTTED_BUBBLEBUD_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BUBBLEBUD_ID);
+	public static RegistryKey<Block> POTTED_FALSE_ROSE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_FALSE_ROSE_ID);
 	public static RegistryKey<Block> POTTED_HERMIT_PURPLE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_HERMIT_PURPLE_ID);
 
 	// Items

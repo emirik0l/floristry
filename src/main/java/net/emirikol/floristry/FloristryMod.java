@@ -20,6 +20,9 @@ public class FloristryMod implements ModInitializer {
 	public static Identifier MOONFLOWER_ID = Identifier.of(MOD_ID, "moonflower");
 	public static Identifier WITHER_BUSH_ID = Identifier.of(MOD_ID, "wither_bush");
 
+	public static Identifier POTTED_BRANDFLOWER_ID = Identifier.of(MOD_ID, "potted_brandflower");
+	public static Identifier POTTED_BUBBLEBUD_ID = Identifier.of(MOD_ID, "potted_bubblebud");
+	public static Identifier POTTED_FALSE_ROSE_ID = Identifier.of(MOD_ID, "potted_false_rose");
 	public static Identifier POTTED_HERMIT_PURPLE_ID = Identifier.of(MOD_ID, "potted_hermit_purple");
 
 	public static final boolean DEBUG_LOGGING = true; //TODO change for release
@@ -46,6 +49,9 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, MOONFLOWER_ID, FloristryBlocks.MOONFLOWER);
 		Registry.register(Registries.BLOCK, WITHER_BUSH_ID, FloristryBlocks.WITHER_BUSH);
 
+		Registry.register(Registries.BLOCK, POTTED_BRANDFLOWER_ID, FloristryBlocks.POTTED_BRANDFLOWER);
+		Registry.register(Registries.BLOCK, POTTED_BUBBLEBUD_ID, FloristryBlocks.POTTED_BUBBLEBUD);
+		Registry.register(Registries.BLOCK, POTTED_FALSE_ROSE_ID, FloristryBlocks.POTTED_FALSE_ROSE);
 		Registry.register(Registries.BLOCK, POTTED_HERMIT_PURPLE_ID, FloristryBlocks.POTTED_HERMIT_PURPLE);
 
 		Registry.register(Registries.ITEM, BRANDFLOWER_ID, FloristryItems.BRANDFLOWER_ITEM);

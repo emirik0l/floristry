@@ -17,6 +17,9 @@ public class FloristryBlocks {
 	public static WitherBushBlock WITHER_BUSH = new WitherBushBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.WITHER_BUSH_KEY));
 
 	// Flowerpots
+	public static FlowerPotBlock POTTED_BRANDFLOWER = new FlowerPotBlock(BRANDFLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BRANDFLOWER_KEY));
+	public static FlowerPotBlock POTTED_BUBBLEBUD = new FlowerPotBlock(BUBBLEBUD, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BUBBLEBUD_KEY));
+	public static FlowerPotBlock POTTED_FALSE_ROSE = new FlowerPotBlock(FALSE_ROSE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_FALSE_ROSE_KEY));
 	public static FlowerPotBlock POTTED_HERMIT_PURPLE = new FlowerPotBlock(HERMIT_PURPLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HERMIT_PURPLE_KEY));
 
 	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
