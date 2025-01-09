@@ -14,6 +14,7 @@ public class FloristryMod implements ModInitializer {
 	public static final String MOD_ID = "floristry";
 
 	public static Identifier BRANDFLOWER_ID = Identifier.of(MOD_ID, "brandflower");
+	public static Identifier BUBBLEBUD_ID = Identifier.of(MOD_ID, "bubblebud");
 	public static Identifier FALSE_ROSE_ID = Identifier.of(MOD_ID, "false_rose");
 	public static Identifier HERMIT_PURPLE_ID = Identifier.of(MOD_ID, "hermit_purple");
 	public static Identifier MOONFLOWER_ID = Identifier.of(MOD_ID, "moonflower");
@@ -39,6 +40,7 @@ public class FloristryMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.register(Registries.BLOCK, BRANDFLOWER_ID, FloristryBlocks.BRANDFLOWER);
+		Registry.register(Registries.BLOCK, BUBBLEBUD_ID, FloristryBlocks.BUBBLEBUD);
 		Registry.register(Registries.BLOCK, FALSE_ROSE_ID, FloristryBlocks.FALSE_ROSE);
 		Registry.register(Registries.BLOCK, HERMIT_PURPLE_ID, FloristryBlocks.HERMIT_PURPLE);
 		Registry.register(Registries.BLOCK, MOONFLOWER_ID, FloristryBlocks.MOONFLOWER);
@@ -47,6 +49,7 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, POTTED_HERMIT_PURPLE_ID, FloristryBlocks.POTTED_HERMIT_PURPLE);
 
 		Registry.register(Registries.ITEM, BRANDFLOWER_ID, FloristryItems.BRANDFLOWER_ITEM);
+		Registry.register(Registries.ITEM, BUBBLEBUD_ID, FloristryItems.BUBBLEBUD_ITEM);
 		Registry.register(Registries.ITEM, FALSE_ROSE_ID, FloristryItems.FALSE_ROSE_ITEM);
 		Registry.register(Registries.ITEM, HERMIT_PURPLE_ID, FloristryItems.HERMIT_PURPLE_ITEM);
 		Registry.register(Registries.ITEM, MOONFLOWER_ID, FloristryItems.MOONFLOWER_ITEM);

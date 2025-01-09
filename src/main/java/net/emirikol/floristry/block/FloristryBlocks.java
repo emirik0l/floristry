@@ -10,6 +10,7 @@ import net.minecraft.sound.BlockSoundGroup;
 public class FloristryBlocks {
 	// Flowers
 	public static FlowerBlock BRANDFLOWER = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.BRANDFLOWER_KEY));
+	public static FlowerBlock BUBBLEBUD = new FlowerBlock(StatusEffects.WATER_BREATHING, 7.0F, createFlowerBlockSettings(FloristryRegistryKeys.BUBBLEBUD_KEY));
 	public static FlowerBlock FALSE_ROSE = new FlowerBlock(StatusEffects.REGENERATION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.FALSE_ROSE_KEY));
 	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.HERMIT_PURPLE_KEY));
 	public static TallFlowerBlock MOONFLOWER = new TallFlowerBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.MOONFLOWER_KEY));
