@@ -3,6 +3,7 @@ package net.emirikol.floristry.breeding;
 import net.emirikol.floristry.block.FloristryBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.command.argument.packrat.Cut;
 
 import java.util.*;
 
@@ -45,6 +46,24 @@ public class Cultivars {
 	};
 
 	// Tier 1 flower breeding.
+	public static final Cultivar[] BRANDFLOWER = {
+			new Cultivar(Blocks.TORCHFLOWER, Blocks.ORANGE_TULIP, FloristryBlocks.BRANDFLOWER, T1_MUTATE),
+			new Cultivar(FloristryBlocks.BRANDFLOWER, SPECIAL_PROPAGATE)
+	};
+
+	public static final Cultivar[] BUBBLEBUD = {
+			new Cultivar(Blocks.LILY_OF_THE_VALLEY, Blocks.ORANGE_TULIP, FloristryBlocks.BUBBLEBUD, T1_MUTATE),
+			new Cultivar(Blocks.LILY_OF_THE_VALLEY, Blocks.PINK_TULIP, FloristryBlocks.BUBBLEBUD, T1_MUTATE),
+			new Cultivar(Blocks.LILY_OF_THE_VALLEY, Blocks.RED_TULIP, FloristryBlocks.BUBBLEBUD, T1_MUTATE),
+			new Cultivar(Blocks.LILY_OF_THE_VALLEY, Blocks.WHITE_TULIP, FloristryBlocks.BUBBLEBUD, T1_MUTATE),
+			new Cultivar(FloristryBlocks.BUBBLEBUD, SPECIAL_PROPAGATE)
+	};
+
+	public static final Cultivar[] FALSE_ROSE = {
+			new Cultivar(Blocks.ROSE_BUSH, Blocks.BLUE_ORCHID, FloristryBlocks.FALSE_ROSE, T1_MUTATE),
+			new Cultivar(FloristryBlocks.FALSE_ROSE, SPECIAL_PROPAGATE)
+	};
+
 	public static final Cultivar[] HERMIT_PURPLE = {
 			new Cultivar(Blocks.POPPY, Blocks.CORNFLOWER, FloristryBlocks.HERMIT_PURPLE, T1_MUTATE),
 			new Cultivar(Blocks.RED_TULIP, Blocks.CORNFLOWER, FloristryBlocks.HERMIT_PURPLE, T1_MUTATE),
@@ -73,6 +92,9 @@ public class Cultivars {
 
 	public static final List<Cultivar> CULTIVARS = new ArrayList<Cultivar>() {{
 		addAll(List.of(VANILLA));
+		addAll(List.of(BRANDFLOWER));
+		addAll(List.of(BUBBLEBUD));
+		addAll(List.of(FALSE_ROSE));
 		addAll(List.of(HERMIT_PURPLE));
 		addAll(List.of(MOONFLOWER));
 		addAll(List.of(WITHER_BUSH));

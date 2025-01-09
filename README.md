@@ -8,13 +8,16 @@ Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/For
 
 ## Current Features
 
-When two vanilla flowers are nearby and one gets pollinated by a bee, there's a chance for them to spread. In some cases, they might mutate into a new flower entirely.
+When two vanilla flowers are close to each other and one gets pollinated by a bee, there's a chance for them to breed and spread. In some cases, they might mutate into a new flower entirely.
 
-Tier 1 flowers (decorative only):
+Tier 1 flowers (decorative and dye only):
 
 - Rose Bush + Wither Rose = Wither Bush
-- Cornflower + (Any Red Flower) = Hermit Purple
 - Sunflower + Open Eyeblossom = Moonflower
+- Cornflower + (Any Red Flower) = Hermit Purple
+- Lily of the Valley + (Any Tulip) = Bubblebud
+- Torchflower + Orange Tulip = Brandflower
+- Rose Bush + Blue Orchid = False Rose
 
 Planned for the future:
 
