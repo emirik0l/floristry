@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKey;
 
 public class FloristryItems {
+	public static BlockItem BRANDFLOWER_ITEM = new BlockItem(FloristryBlocks.BRANDFLOWER, createFlowerItemSettings(FloristryRegistryKeys.BRANDFLOWER_ITEM_KEY));
+	public static BlockItem FALSE_ROSE_ITEM = new BlockItem(FloristryBlocks.FALSE_ROSE, createFlowerItemSettings(FloristryRegistryKeys.FALSE_ROSE_ITEM_KEY));
 	public static BlockItem HERMIT_PURPLE_ITEM = new BlockItem(FloristryBlocks.HERMIT_PURPLE, createFlowerItemSettings(FloristryRegistryKeys.HERMIT_PURPLE_ITEM_KEY));
 	public static BlockItem MOONFLOWER_ITEM = new BlockItem(FloristryBlocks.MOONFLOWER, createFlowerItemSettings(FloristryRegistryKeys.MOONFLOWER_ITEM_KEY));
 	public static BlockItem WITHER_BUSH_ITEM = new BlockItem(FloristryBlocks.WITHER_BUSH, createFlowerItemSettings(FloristryRegistryKeys.WITHER_BUSH_ITEM_KEY));
