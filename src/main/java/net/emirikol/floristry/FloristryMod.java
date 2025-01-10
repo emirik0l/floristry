@@ -13,11 +13,13 @@ import org.slf4j.LoggerFactory;
 public class FloristryMod implements ModInitializer {
 	public static final String MOD_ID = "floristry";
 
+	public static Identifier BLOOMING_THISTLE_ID = Identifier.of(MOD_ID, "blooming_thistle");
 	public static Identifier BRANDFLOWER_ID = Identifier.of(MOD_ID, "brandflower");
 	public static Identifier BUBBLEBUD_ID = Identifier.of(MOD_ID, "bubblebud");
 	public static Identifier FALSE_ROSE_ID = Identifier.of(MOD_ID, "false_rose");
 	public static Identifier HERMIT_PURPLE_ID = Identifier.of(MOD_ID, "hermit_purple");
 	public static Identifier MOONFLOWER_ID = Identifier.of(MOD_ID, "moonflower");
+	public static Identifier PATINA_FLOWER_ID = Identifier.of(MOD_ID, "patina_flower");
 	public static Identifier WITHER_BUSH_ID = Identifier.of(MOD_ID, "wither_bush");
 
 	public static Identifier POTTED_BRANDFLOWER_ID = Identifier.of(MOD_ID, "potted_brandflower");
@@ -42,11 +44,13 @@ public class FloristryMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registries.BLOCK, BLOOMING_THISTLE_ID, FloristryBlocks.BLOOMING_THISTLE);
 		Registry.register(Registries.BLOCK, BRANDFLOWER_ID, FloristryBlocks.BRANDFLOWER);
 		Registry.register(Registries.BLOCK, BUBBLEBUD_ID, FloristryBlocks.BUBBLEBUD);
 		Registry.register(Registries.BLOCK, FALSE_ROSE_ID, FloristryBlocks.FALSE_ROSE);
 		Registry.register(Registries.BLOCK, HERMIT_PURPLE_ID, FloristryBlocks.HERMIT_PURPLE);
 		Registry.register(Registries.BLOCK, MOONFLOWER_ID, FloristryBlocks.MOONFLOWER);
+		Registry.register(Registries.BLOCK, PATINA_FLOWER_ID, FloristryBlocks.PATINA_FLOWER);
 		Registry.register(Registries.BLOCK, WITHER_BUSH_ID, FloristryBlocks.WITHER_BUSH);
 
 		Registry.register(Registries.BLOCK, POTTED_BRANDFLOWER_ID, FloristryBlocks.POTTED_BRANDFLOWER);
@@ -54,11 +58,13 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, POTTED_FALSE_ROSE_ID, FloristryBlocks.POTTED_FALSE_ROSE);
 		Registry.register(Registries.BLOCK, POTTED_HERMIT_PURPLE_ID, FloristryBlocks.POTTED_HERMIT_PURPLE);
 
+		Registry.register(Registries.ITEM, BLOOMING_THISTLE_ID, FloristryItems.BLOOMING_THISTLE_ITEM);
 		Registry.register(Registries.ITEM, BRANDFLOWER_ID, FloristryItems.BRANDFLOWER_ITEM);
 		Registry.register(Registries.ITEM, BUBBLEBUD_ID, FloristryItems.BUBBLEBUD_ITEM);
 		Registry.register(Registries.ITEM, FALSE_ROSE_ID, FloristryItems.FALSE_ROSE_ITEM);
 		Registry.register(Registries.ITEM, HERMIT_PURPLE_ID, FloristryItems.HERMIT_PURPLE_ITEM);
 		Registry.register(Registries.ITEM, MOONFLOWER_ID, FloristryItems.MOONFLOWER_ITEM);
+		Registry.register(Registries.ITEM, PATINA_FLOWER_ID, FloristryItems.PATINA_FLOWER_ITEM);
 		Registry.register(Registries.ITEM, WITHER_BUSH_ID, FloristryItems.WITHER_BUSH_ITEM);
 	}
 }
