@@ -12,12 +12,14 @@ When two vanilla flowers are close to each other and one gets pollinated by a be
 
 Tier 1 flowers (decorative and dye only):
 
-- Rose Bush + Wither Rose = Wither Bush
-- Sunflower + Open Eyeblossom = Moonflower
-- Cornflower + (Any Red Flower) = Hermit Purple
-- Lily of the Valley + (Any Tulip) = Bubblebud
+- Allium + Lilac = Blooming Thistle
 - Torchflower + Orange Tulip = Brandflower
+- Lily of the Valley + (Any Tulip) = Bubblebud
 - Rose Bush + Blue Orchid = False Rose
+- Cornflower + (Any Red Flower) = Hermit Purple
+- Sunflower + Open Eyeblossom = Moonflower
+- Azure Bluet + Dandelion/Daisy = Patina Flower
+- Rose Bush + Wither Rose = Wither Bush
 
 Planned for the future:
 
