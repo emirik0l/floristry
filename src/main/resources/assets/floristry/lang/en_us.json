@@ -1,4 +1,7 @@
 {
+  "block.floristry.blooming_thistle": "Blooming Thistle",
+  "item.floristry.blooming_thistle": "Blooming Thistle",
+  "block.floristry.potted_blooming_thistle": "Potted Blooming Thistle",
   "block.floristry.brandflower": "Brandflower",
   "item.floristry.brandflower": "Brandflower",
   "block.floristry.potted_brandflower": "Potted Brandflower",
@@ -13,6 +16,9 @@
   "block.floristry.potted_hermit_purple": "Potted Hermit Purple",
   "block.floristry.moonflower": "Moonflower",
   "item.floristry.moonflower": "Moonflower",
+  "block.floristry.patina_flower": "Patina Flower",
+  "item.floristry.patina_flower": "Patina Flower",
+  "block.floristry.potted_patina_flower": "Potted Patina Flower",
   "block.floristry.wither_bush": "Wither Bush",
   "item.floristry.wither_bush": "Wither Bush"
 }

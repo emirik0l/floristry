@@ -1,11 +1,13 @@
 {
   "replace": false,
   "values": [
+    "floristry:blooming_thistle",
     "floristry:brandflower",
     "floristry:bubblebud",
     "floristry:false_rose",
     "floristry:hermit_purple",
     "floristry:moonflower",
+    "floristry:patina_flower",
     "floristry:wither_bush"
   ]
 }
