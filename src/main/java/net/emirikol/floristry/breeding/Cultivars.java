@@ -46,6 +46,11 @@ public class Cultivars {
 	};
 
 	// Tier 1 flower breeding.
+	public static final Cultivar[] BLOOMING_THISTLE = {
+			new Cultivar(Blocks.ALLIUM, Blocks.LILAC, FloristryBlocks.BLOOMING_THISTLE, T1_MUTATE),
+			new Cultivar(FloristryBlocks.BLOOMING_THISTLE, SPECIAL_PROPAGATE)
+	};
+
 	public static final Cultivar[] BRANDFLOWER = {
 			new Cultivar(Blocks.TORCHFLOWER, Blocks.ORANGE_TULIP, FloristryBlocks.BRANDFLOWER, T1_MUTATE),
 			new Cultivar(FloristryBlocks.BRANDFLOWER, SPECIAL_PROPAGATE)
@@ -76,6 +81,12 @@ public class Cultivars {
 			new Cultivar(FloristryBlocks.MOONFLOWER, SPECIAL_PROPAGATE)
 	};
 
+	public static final Cultivar[] PATINA_FLOWER = {
+			new Cultivar(Blocks.AZURE_BLUET, Blocks.DANDELION, FloristryBlocks.PATINA_FLOWER, T1_MUTATE),
+			new Cultivar(Blocks.AZURE_BLUET, Blocks.OXEYE_DAISY, FloristryBlocks.PATINA_FLOWER, T1_MUTATE),
+			new Cultivar(FloristryBlocks.PATINA_FLOWER, SPECIAL_PROPAGATE)
+	};
+
 	public static final Cultivar[] WITHER_BUSH = {
 			new Cultivar(Blocks.WITHER_ROSE, Blocks.ROSE_BUSH, FloristryBlocks.WITHER_BUSH, T1_MUTATE),
 			new Cultivar(FloristryBlocks.WITHER_BUSH, SPECIAL_PROPAGATE)
@@ -92,11 +103,13 @@ public class Cultivars {
 
 	public static final List<Cultivar> CULTIVARS = new ArrayList<Cultivar>() {{
 		addAll(List.of(VANILLA));
+		addAll(List.of(BLOOMING_THISTLE));
 		addAll(List.of(BRANDFLOWER));
 		addAll(List.of(BUBBLEBUD));
 		addAll(List.of(FALSE_ROSE));
 		addAll(List.of(HERMIT_PURPLE));
 		addAll(List.of(MOONFLOWER));
+		addAll(List.of(PATINA_FLOWER));
 		addAll(List.of(WITHER_BUSH));
 	}};
 
