@@ -19,12 +19,14 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Block> VIRIDELPHIA_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.VIRIDELPHIA_ID);
 	public static RegistryKey<Block> WITHER_BUSH_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.WITHER_BUSH_ID);
 
+	public static RegistryKey<Block> POTTED_AGLAOPHOTIS_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_AGLAOPHOTIS_ID);
 	public static RegistryKey<Block> POTTED_BLOOMING_THISTLE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BLOOMING_THISTLE_ID);
 	public static RegistryKey<Block> POTTED_BRANDFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BRANDFLOWER_ID);
 	public static RegistryKey<Block> POTTED_BUBBLEBUD_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BUBBLEBUD_ID);
 	public static RegistryKey<Block> POTTED_FALSE_ROSE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_FALSE_ROSE_ID);
 	public static RegistryKey<Block> POTTED_HERMIT_PURPLE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_HERMIT_PURPLE_ID);
 	public static RegistryKey<Block> POTTED_PATINA_FLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_PATINA_FLOWER_ID);
+	public static RegistryKey<Block> POTTED_VIRIDELPHIA_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_VIRIDELPHIA_ID);
 
 	// Items
 	public static RegistryKey<Item> AGLAOPHOTIS_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.AGLAOPHOTIS_ID);

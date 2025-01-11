@@ -21,12 +21,14 @@ public class FloristryBlocks {
 	public static WitherBushBlock WITHER_BUSH = new WitherBushBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.WITHER_BUSH_KEY));
 
 	// Flowerpots
+	public static FlowerPotBlock POTTED_AGLAOPHOTIS = new FlowerPotBlock(AGLAOPHOTIS, createFlowerPotSettings(FloristryRegistryKeys.POTTED_AGLAOPHOTIS_KEY));
 	public static FlowerPotBlock POTTED_BLOOMING_THISTLE = new FlowerPotBlock(BLOOMING_THISTLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BLOOMING_THISTLE_KEY));
 	public static FlowerPotBlock POTTED_BRANDFLOWER = new FlowerPotBlock(BRANDFLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BRANDFLOWER_KEY));
 	public static FlowerPotBlock POTTED_BUBBLEBUD = new FlowerPotBlock(BUBBLEBUD, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BUBBLEBUD_KEY));
 	public static FlowerPotBlock POTTED_FALSE_ROSE = new FlowerPotBlock(FALSE_ROSE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_FALSE_ROSE_KEY));
 	public static FlowerPotBlock POTTED_HERMIT_PURPLE = new FlowerPotBlock(HERMIT_PURPLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HERMIT_PURPLE_KEY));
 	public static FlowerPotBlock POTTED_PATINA_FLOWER = new FlowerPotBlock(PATINA_FLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_PATINA_FLOWER_KEY));
+	public static FlowerPotBlock POTTED_VIRIDELPHIA = new FlowerPotBlock(VIRIDELPHIA, createFlowerPotSettings(FloristryRegistryKeys.POTTED_VIRIDELPHIA_KEY));
 
 	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
 		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY);
