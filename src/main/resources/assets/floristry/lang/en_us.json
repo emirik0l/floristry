@@ -1,4 +1,7 @@
 {
+  "block.floristry.aglaophotis": "Aglaophotis",
+  "item.floristry.aglaophotis": "Aglaophotis",
+  "block.floristry.potted_aglaophotis": "Potted Aglaophotis",
   "block.floristry.blooming_thistle": "Blooming Thistle",
   "item.floristry.blooming_thistle": "Blooming Thistle",
   "block.floristry.potted_blooming_thistle": "Potted Blooming Thistle",
@@ -19,6 +22,9 @@
   "block.floristry.patina_flower": "Patina Flower",
   "item.floristry.patina_flower": "Patina Flower",
   "block.floristry.potted_patina_flower": "Potted Patina Flower",
+  "block.floristry.viridelphia": "Viridelphia",
+  "item.floristry.viridelphia": "Viridelphia",
+  "block.floristry.potted_viridelphia": "Potted Viridelphia",
   "block.floristry.wither_bush": "Wither Bush",
   "item.floristry.wither_bush": "Wither Bush"
 }

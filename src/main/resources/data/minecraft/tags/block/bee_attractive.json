@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "floristry:aglaophotis",
     "floristry:blooming_thistle",
     "floristry:brandflower",
     "floristry:bubblebud",
@@ -8,6 +9,7 @@
     "floristry:hermit_purple",
     "floristry:moonflower",
     "floristry:patina_flower",
+    "floristry:viridelphia",
     "floristry:wither_bush"
   ]
 }
