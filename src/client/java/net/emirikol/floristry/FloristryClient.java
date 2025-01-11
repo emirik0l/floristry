@@ -8,6 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 public class FloristryClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.AGLAOPHOTIS, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.BLOOMING_THISTLE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.BRANDFLOWER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.BUBBLEBUD, RenderLayer.getCutout());
@@ -15,6 +16,7 @@ public class FloristryClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.HERMIT_PURPLE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.MOONFLOWER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.PATINA_FLOWER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.VIRIDELPHIA, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.WITHER_BUSH, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.POTTED_BLOOMING_THISTLE, RenderLayer.getCutout());
