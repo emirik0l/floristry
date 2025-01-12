@@ -22,6 +22,7 @@ public class FloristryRegistryKeys {
 
 	public static RegistryKey<Block> POTTED_AGLAOPHOTIS_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_AGLAOPHOTIS_ID);
 	public static RegistryKey<Block> POTTED_BLOOMING_THISTLE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BLOOMING_THISTLE_ID);
+	public static RegistryKey<Block> POTTED_BONFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BONFLOWER_ID);
 	public static RegistryKey<Block> POTTED_BRANDFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BRANDFLOWER_ID);
 	public static RegistryKey<Block> POTTED_BUBBLEBUD_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_BUBBLEBUD_ID);
 	public static RegistryKey<Block> POTTED_FALSE_ROSE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_FALSE_ROSE_ID);

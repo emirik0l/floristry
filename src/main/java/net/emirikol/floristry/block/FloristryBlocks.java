@@ -24,6 +24,7 @@ public class FloristryBlocks {
 	// Flowerpots
 	public static FlowerPotBlock POTTED_AGLAOPHOTIS = new FlowerPotBlock(AGLAOPHOTIS, createFlowerPotSettings(FloristryRegistryKeys.POTTED_AGLAOPHOTIS_KEY));
 	public static FlowerPotBlock POTTED_BLOOMING_THISTLE = new FlowerPotBlock(BLOOMING_THISTLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BLOOMING_THISTLE_KEY));
+	public static FlowerPotBlock POTTED_BONFLOWER = new FlowerPotBlock(BONFLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BONFLOWER_KEY));
 	public static FlowerPotBlock POTTED_BRANDFLOWER = new FlowerPotBlock(BRANDFLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BRANDFLOWER_KEY));
 	public static FlowerPotBlock POTTED_BUBBLEBUD = new FlowerPotBlock(BUBBLEBUD, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BUBBLEBUD_KEY));
 	public static FlowerPotBlock POTTED_FALSE_ROSE = new FlowerPotBlock(FALSE_ROSE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_FALSE_ROSE_KEY));
