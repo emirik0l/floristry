@@ -9,6 +9,7 @@ import net.minecraft.registry.RegistryKey;
 public class FloristryItems {
 	public static BlockItem AGLAOPHOTIS_ITEM = new BlockItem(FloristryBlocks.AGLAOPHOTIS, createFlowerItemSettings(FloristryRegistryKeys.AGLAOPHOTIS_ITEM_KEY));
 	public static BlockItem BLOOMING_THISTLE_ITEM = new BlockItem(FloristryBlocks.BLOOMING_THISTLE, createFlowerItemSettings(FloristryRegistryKeys.BLOOMING_THISTLE_ITEM_KEY));
+	public static BlockItem BONFLOWER_ITEM = new BlockItem(FloristryBlocks.BONFLOWER, createFlowerItemSettings(FloristryRegistryKeys.BONFLOWER_ITEM_KEY));
 	public static BlockItem BRANDFLOWER_ITEM = new BlockItem(FloristryBlocks.BRANDFLOWER, createFlowerItemSettings(FloristryRegistryKeys.BRANDFLOWER_ITEM_KEY));
 	public static BlockItem BUBBLEBUD_ITEM = new BlockItem(FloristryBlocks.BUBBLEBUD, createFlowerItemSettings(FloristryRegistryKeys.BUBBLEBUD_ITEM_KEY));
 	public static BlockItem FALSE_ROSE_ITEM = new BlockItem(FloristryBlocks.FALSE_ROSE, createFlowerItemSettings(FloristryRegistryKeys.FALSE_ROSE_ITEM_KEY));

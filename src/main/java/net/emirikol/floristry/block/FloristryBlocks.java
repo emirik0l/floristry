@@ -11,6 +11,7 @@ public class FloristryBlocks {
 	// Flowers
 	public static FlowerBlock AGLAOPHOTIS = new FlowerBlock(StatusEffects.WATER_BREATHING, 7.0F, createFlowerBlockSettings(FloristryRegistryKeys.AGLAOPHOTIS_KEY));
 	public static FlowerBlock BLOOMING_THISTLE = new FlowerBlock(StatusEffects.RESISTANCE, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.BLOOMING_THISTLE_KEY));
+	public static BonflowerBlock BONFLOWER = new BonflowerBlock(createFlowerBlockSettings(FloristryRegistryKeys.BONFLOWER_KEY));
 	public static FlowerBlock BRANDFLOWER = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.BRANDFLOWER_KEY));
 	public static FlowerBlock BUBBLEBUD = new FlowerBlock(StatusEffects.WATER_BREATHING, 7.0F, createFlowerBlockSettings(FloristryRegistryKeys.BUBBLEBUD_KEY));
 	public static FlowerBlock FALSE_ROSE = new FlowerBlock(StatusEffects.REGENERATION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.FALSE_ROSE_KEY));
