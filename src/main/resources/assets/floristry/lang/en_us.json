@@ -29,5 +29,8 @@
   "item.floristry.viridelphia": "Viridelphia",
   "block.floristry.potted_viridelphia": "Potted Viridelphia",
   "block.floristry.wither_bush": "Wither Bush",
-  "item.floristry.wither_bush": "Wither Bush"
+  "item.floristry.wither_bush": "Wither Bush",
+
+  "item.floristry.bonflower_honey": "Bonflower Honey",
+  "item.floristry.bonflower_honey.tooltip": "I can see the fire in your eyes!"
 }
