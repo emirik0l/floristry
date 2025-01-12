@@ -20,8 +20,14 @@ public class FloristryItems {
 	public static BlockItem VIRIDELPHIA_ITEM = new BlockItem(FloristryBlocks.VIRIDELPHIA, createFlowerItemSettings(FloristryRegistryKeys.VIRIDELPHIA_ITEM_KEY));
 	public static BlockItem WITHER_BUSH_ITEM = new BlockItem(FloristryBlocks.WITHER_BUSH, createFlowerItemSettings(FloristryRegistryKeys.WITHER_BUSH_ITEM_KEY));
 
+	public static BonflowerHoneyItem BONFLOWER_HONEY = new BonflowerHoneyItem(createHoneySettings(FloristryRegistryKeys.BONFLOWER_HONEY_KEY));
+
 	public static Item.Settings createFlowerItemSettings(RegistryKey<Item> key) {
 		return new Item.Settings().useBlockPrefixedTranslationKey().registryKey(key);
+	}
+
+	public static Item.Settings createHoneySettings(RegistryKey<Item> key) {
+		return new Item.Settings().useItemPrefixedTranslationKey().registryKey(key);
 	}
 
 	public static void registerFuels() {

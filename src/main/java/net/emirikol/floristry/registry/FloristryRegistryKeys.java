@@ -30,7 +30,7 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Block> POTTED_PATINA_FLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_PATINA_FLOWER_ID);
 	public static RegistryKey<Block> POTTED_VIRIDELPHIA_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.POTTED_VIRIDELPHIA_ID);
 
-	// Items
+	// Block Items
 	public static RegistryKey<Item> AGLAOPHOTIS_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.AGLAOPHOTIS_ID);
 	public static RegistryKey<Item> BLOOMING_THISTLE_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BLOOMING_THISTLE_ID);
 	public static RegistryKey<Item> BONFLOWER_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BONFLOWER_ID);
@@ -42,4 +42,7 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Item> PATINA_FLOWER_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.PATINA_FLOWER_ID);
 	public static RegistryKey<Item> VIRIDELPHIA_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.VIRIDELPHIA_ID);
 	public static RegistryKey<Item> WITHER_BUSH_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.WITHER_BUSH_ID);
+
+	// Honey Items
+	public static RegistryKey<Item> BONFLOWER_HONEY_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BONFLOWER_HONEY_ID);
 }

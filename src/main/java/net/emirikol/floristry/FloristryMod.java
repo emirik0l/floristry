@@ -35,6 +35,8 @@ public class FloristryMod implements ModInitializer {
 	public static Identifier POTTED_PATINA_FLOWER_ID = Identifier.of(MOD_ID, "potted_patina_flower");
 	public static Identifier POTTED_VIRIDELPHIA_ID = Identifier.of(MOD_ID, "potted_viridelphia");
 
+	public static Identifier BONFLOWER_HONEY_ID = Identifier.of(MOD_ID, "bonflower_honey");
+
 	public static final boolean DEBUG_LOGGING = false;
 	public static final int FLOWER_PLACE_RANGE = 5;
 	public static final int FLOWER_SCAN_RANGE = 5;
@@ -85,6 +87,8 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.ITEM, PATINA_FLOWER_ID, FloristryItems.PATINA_FLOWER_ITEM);
 		Registry.register(Registries.ITEM, VIRIDELPHIA_ID, FloristryItems.VIRIDELPHIA_ITEM);
 		Registry.register(Registries.ITEM, WITHER_BUSH_ID, FloristryItems.WITHER_BUSH_ITEM);
+
+		Registry.register(Registries.ITEM, BONFLOWER_HONEY_ID, FloristryItems.BONFLOWER_HONEY);
 
 		FloristryItems.registerFuels();
 	}
