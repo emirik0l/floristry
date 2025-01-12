@@ -1,8 +1,10 @@
 package net.emirikol.floristry.mixin;
 
+import net.emirikol.floristry.FloristryComponents;
 import net.emirikol.floristry.FloristryMod;
 import net.emirikol.floristry.breeding.Cultivar;
 import net.emirikol.floristry.breeding.Cultivars;
+import net.emirikol.floristry.component.NectarComponent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PlantBlock;
@@ -40,6 +42,11 @@ public abstract class PollinateGoalMixin {
 		Optional<Block> donor = this.getPollenDonor(flowerPos);
 		if (donor.isPresent()) {
 			FloristryMod.logInfo("Bee got pollen from a " + donor.get().getName().getString());
+
+			// Attach data to the bee to identify where it got nectar from.
+			Block flower = beeEntity.getWorld().getBlockState(flowerPos).getBlock();
+			NectarComponent nectarSource = FloristryComponents.NECTAR_SOURCE.get(beeEntity);
+			nectarSource.setSource(flower);
 
 			// Iterate through nearby flowers to identify potential cultivars that could produce children.
 			// We use a set so that each cultivar is only rolled for once (spamming flowers does nothing).

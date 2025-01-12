@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"net.emirikol.floristry.FloristryClient"
+		],
+		"cardinal-components": [
+			"net.emirikol.floristry.FloristryComponents"
 		]
 	},
 	"mixins": [
@@ -32,5 +35,10 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
+	},
+	"custom": {
+		"cardinal-components": [
+			"floristry:nectar_source"
+		]
 	}
 }
