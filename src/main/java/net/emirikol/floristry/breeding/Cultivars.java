@@ -104,7 +104,10 @@ public class Cultivars {
 	};
 
 	//Tier 2 flower breeding.
-	// TODO
+	public static final Cultivar[] BONFLOWER = {
+			new Cultivar(FloristryBlocks.HERMIT_PURPLE, FloristryBlocks.BRANDFLOWER, FloristryBlocks.BONFLOWER, T2_MUTATE),
+			new Cultivar(FloristryBlocks.BONFLOWER, SPECIAL_PROPAGATE)
+	};
 
 	// Tier 3 flower breeding.
 	// TODO
@@ -125,6 +128,8 @@ public class Cultivars {
 		addAll(List.of(PATINA_FLOWER));
 		addAll(List.of(VIRIDELPHIA));
 		addAll(List.of(WITHER_BUSH));
+
+		addAll(List.of(BONFLOWER));
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
