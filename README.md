@@ -4,7 +4,7 @@ Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/For
 
 **This mod is in a very early stage!**
 
-![a few special flowers](/readme/flowers.png)
+![tier 1 special flowers](/readme/flowers.png)
 
 ## Current Features
 
@@ -12,6 +12,7 @@ When two vanilla flowers are close to each other and one gets pollinated by a be
 
 Tier 1 flowers (decorative and dye only):
 
+- Peony + Pink Petals = Aglaophotis
 - Allium + Lilac = Blooming Thistle
 - Torchflower + Orange Tulip = Brandflower
 - Lily of the Valley + (Any Tulip) = Bubblebud
@@ -19,10 +20,10 @@ Tier 1 flowers (decorative and dye only):
 - Cornflower + (Any Red Flower) = Hermit Purple
 - Sunflower + Open Eyeblossom = Moonflower
 - Azure Bluet + Dandelion/Daisy = Patina Flower
+- Dandelion + Cornflower/Blue Orchid = Viridelphia
 - Rose Bush + Wither Rose = Wither Bush
 
 Planned for the future:
 
-- About 10 Tier 1 flowers.
 - 3 more tiers of special flowers that can only be obtained by cross-breeding. Higher tiers of special flowers have unique effects.
 - Special honey which can be made by bees when they gather nectar from special flowers. It has much more concentrated effects compared to the flowers.
