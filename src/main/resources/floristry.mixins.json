@@ -3,6 +3,7 @@
   "package": "net.emirikol.floristry.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "DeliverNectarMixin",
     "PollinateGoalMixin"
   ],
   "injectors": {

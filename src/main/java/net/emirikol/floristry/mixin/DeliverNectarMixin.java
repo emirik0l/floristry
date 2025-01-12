@@ -25,6 +25,9 @@ public abstract class DeliverNectarMixin {
 
 		// Retrieve the beehive block entity.
 		BeehiveBlockEntity hive = getHive();
+		if (hive == null) {
+			return;
+		}
 		NectarComponent hiveNectar = FloristryComponents.NECTAR_SOURCE.get(hive);
 
 		// If the bee doesn't have nectar data, do nothing.
