@@ -2,6 +2,7 @@ package net.emirikol.floristry.item;
 
 import net.emirikol.floristry.block.FloristryBlocks;
 import net.emirikol.floristry.registry.FloristryRegistryKeys;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKey;
@@ -21,5 +22,11 @@ public class FloristryItems {
 
 	public static Item.Settings createFlowerItemSettings(RegistryKey<Item> key) {
 		return new Item.Settings().useBlockPrefixedTranslationKey().registryKey(key);
+	}
+
+	public static void registerFuels() {
+		FuelRegistryEvents.BUILD.register((builder, context) -> {
+			builder.add(BONFLOWER_ITEM, context.baseSmeltTime() * 3);
+		});
 	}
 }

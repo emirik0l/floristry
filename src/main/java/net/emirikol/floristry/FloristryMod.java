@@ -85,5 +85,7 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.ITEM, PATINA_FLOWER_ID, FloristryItems.PATINA_FLOWER_ITEM);
 		Registry.register(Registries.ITEM, VIRIDELPHIA_ID, FloristryItems.VIRIDELPHIA_ITEM);
 		Registry.register(Registries.ITEM, WITHER_BUSH_ID, FloristryItems.WITHER_BUSH_ITEM);
+
+		FloristryItems.registerFuels();
 	}
 }
