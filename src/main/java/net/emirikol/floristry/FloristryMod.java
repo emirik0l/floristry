@@ -33,7 +33,7 @@ public class FloristryMod implements ModInitializer {
 	public static Identifier POTTED_PATINA_FLOWER_ID = Identifier.of(MOD_ID, "potted_patina_flower");
 	public static Identifier POTTED_VIRIDELPHIA_ID = Identifier.of(MOD_ID, "potted_viridelphia");
 
-	public static final boolean DEBUG_LOGGING = true; //TODO change for release
+	public static final boolean DEBUG_LOGGING = false;
 	public static final int FLOWER_PLACE_RANGE = 5;
 	public static final int FLOWER_SCAN_RANGE = 5;
 
