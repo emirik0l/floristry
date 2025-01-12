@@ -13,7 +13,7 @@ public class NectarComponent implements Component {
 
 	public Block getSource() { return this.nectarSource; }
 	public void setSource(Block block) { this.nectarSource = block; }
-	public void resetSource() { this.nectarSource = Blocks.AIR; }
+	public void clearSource() { this.nectarSource = Blocks.AIR; }
 
 	@Override public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registries) {
 		String sourceIdStr = tag.getString("nectar_source");
