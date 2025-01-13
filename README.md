@@ -12,7 +12,7 @@ Instead, you'll be using Minecraft bees to breed magical flowers with a wide var
 
 **Vanilla flowers**. When two vanilla flowers are close to each other and one gets pollinated by a bee, there's a chance for them to breed and spread. In some cases, they might mutate into a new flower entirely.
 
-**Special flowers**. Made by breeding vanilla flowers together, they're mostly a stepping stone for more potent blooms. They come in 4 tiers: lower tiers are merely decorative while higher tiers produce unique effects like negating fall damage, producing light, or blocking mobs.
+**Special flowers**. Made by breeding vanilla flowers together, they come in 4 tiers of increasingly powerful blooms. Lower tiers are merely decorative while higher tiers produce unique effects like negating fall damage, producing light, or blocking mobs.
 
 **Magic honey**. When a bee retrieves honey from special flowers, using a glass bottle on the hive or nest might produce magic honey instead of the usual stuff. Honey has more potent effects than the flowers, and different flowers produce different kinds of honey.
 
