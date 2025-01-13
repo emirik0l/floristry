@@ -1,29 +1,19 @@
 # Floristry
 
-Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/ForestryMC), this is also a mod about bees and breeding. However, in Floristry you won't be breeding the bees themselves. Instead, you'll be using Minecraft bees to breed magical flowers with a wide variety of mysterious effects. And that's to say nothing about the honey your bees can make from them!
+Inspired by SirSengir's classic mod [Forestry](https://github.com/ForestryMC/ForestryMC), this one is also a mod about bees and breeding. However, in Floristry you won't be breeding the bees themselves. 
 
-**This mod is in a very early stage!**
+Instead, you'll be using Minecraft bees to breed magical flowers with a wide variety of mysterious effects. And that's to say nothing about the unusual honey your bees will end up making!
+
+**This mod is actively being developed; some features are unfinished, and there may be bugs!**
 
 ![tier 1 special flowers](/readme/flowers.png)
 
-## Current Features
+## Features
 
-When two vanilla flowers are close to each other and one gets pollinated by a bee, there's a chance for them to breed and spread. In some cases, they might mutate into a new flower entirely.
+**Vanilla flowers**. When two vanilla flowers are close to each other and one gets pollinated by a bee, there's a chance for them to breed and spread. In some cases, they might mutate into a new flower entirely.
 
-Tier 1 flowers (decorative and dye only):
+**Special flowers**. Made by breeding vanilla flowers together, they're mostly a stepping stone for more potent blooms. They come in 4 tiers: lower tiers are merely decorative while higher tiers produce unique effects like negating fall damage, producing light, or blocking mobs.
 
-- Peony + Pink Petals = Aglaophotis
-- Allium + Lilac = Blooming Thistle
-- Torchflower + Orange Tulip = Brandflower
-- Lily of the Valley + (Any Tulip) = Bubblebud
-- Rose Bush + Blue Orchid = False Rose
-- Cornflower + (Any Red Flower) = Hermit Purple
-- Sunflower + Open Eyeblossom = Moonflower
-- Azure Bluet + Dandelion/Daisy = Patina Flower
-- Dandelion + Cornflower/Blue Orchid = Viridelphia
-- Rose Bush + Wither Rose = Wither Bush
+**Magic honey**. When a bee retrieves honey from special flowers, using a glass bottle on the hive or nest might produce magic honey instead of the usual stuff. Honey has more potent effects than the flowers, and different flowers produce different kinds of honey.
 
-Planned for the future:
-
-- 3 more tiers of special flowers that can only be obtained by cross-breeding. Higher tiers of special flowers have unique effects.
-- Special honey which can be made by bees when they gather nectar from special flowers. It has much more concentrated effects compared to the flowers.
+_Not all planned flowers and honey are currently implemented._ For more information about the flowers and honey that currently exist in the mod, see the wiki.
