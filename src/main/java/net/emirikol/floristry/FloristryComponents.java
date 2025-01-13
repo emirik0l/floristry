@@ -17,11 +17,11 @@ public class FloristryComponents implements EntityComponentInitializer, BlockCom
 
 	@Override
 	public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
-		registry.registerFor(BeeEntity.class, NECTAR_SOURCE, entity -> new NectarComponent());
+		registry.registerFor(BeeEntity.class, NECTAR_SOURCE, NectarComponent::new);
 	}
 
 	@Override
 	public void registerBlockComponentFactories(BlockComponentFactoryRegistry registry) {
-		registry.registerFor(BeehiveBlockEntity.class, NECTAR_SOURCE, beehiveBlockEntity -> new NectarComponent());
+		registry.registerFor(BeehiveBlockEntity.class, NECTAR_SOURCE, NectarComponent::new);
 	}
 }
