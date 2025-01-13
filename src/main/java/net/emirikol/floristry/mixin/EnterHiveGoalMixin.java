@@ -6,25 +6,28 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BeehiveBlockEntity;
 import net.minecraft.entity.passive.BeeEntity;
+import net.minecraft.util.math.BlockPos;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(BeeEntity.class)
-public abstract class DeliverNectarMixin {
-	BeeEntity beeEntity = (BeeEntity) (Object) this;
+@Mixin(targets = "net.minecraft.entity.passive.BeeEntity$EnterHiveGoal")
+public abstract class EnterHiveGoalMixin {
 
-	// Shadow declarations for private methods/fields of BeeEntity.
-	@Shadow	abstract BeehiveBlockEntity getHive();
+	// Synthetic field used to access the parent BeeEntity object.
+	@Shadow @Final BeeEntity field_20367;
+	private final BeeEntity beeEntity = field_20367;
 
-	@Inject(method = "onHoneyDelivered", at = @At("TAIL"), cancellable = true)
-	public void onHoneyDelivered(CallbackInfo info) {
+	@Inject(method = "start", at = @At("TAIL"), cancellable = true)
+	public void enterHive(CallbackInfo info) {
 		NectarComponent beeNectar = FloristryComponents.NECTAR_SOURCE.get(beeEntity);
 
 		// Retrieve the beehive block entity.
-		BeehiveBlockEntity hive = getHive();
+		BlockPos hivePos = beeEntity.getHivePos();
+		BeehiveBlockEntity hive = (BeehiveBlockEntity) beeEntity.getWorld().getBlockEntity(hivePos);
 		if (hive == null) {
 			return;
 		}
@@ -38,6 +41,7 @@ public abstract class DeliverNectarMixin {
 
 		// Copy data from bee to hive.
 		hiveNectar.setSource(flower);
+		hive.markDirty();
 
 		// Clear data from bee.
 		beeNectar.clearSource();
