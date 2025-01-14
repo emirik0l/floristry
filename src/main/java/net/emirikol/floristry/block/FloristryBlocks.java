@@ -13,6 +13,7 @@ public class FloristryBlocks {
 	public static FlowerBlock BLOOMING_THISTLE = new FlowerBlock(StatusEffects.RESISTANCE, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.BLOOMING_THISTLE_KEY));
 	public static BonflowerBlock BONFLOWER = new BonflowerBlock(createFlowerBlockSettings(FloristryRegistryKeys.BONFLOWER_KEY));
 	public static FlowerBlock BRANDFLOWER = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.BRANDFLOWER_KEY));
+	public static BreezeCloverBlock BREEZE_CLOVER = new BreezeCloverBlock(createFlowerBedBlockSettings(FloristryRegistryKeys.BREEZE_CLOVER_KEY));
 	public static FlowerBlock BUBBLEBUD = new FlowerBlock(StatusEffects.WATER_BREATHING, 7.0F, createFlowerBlockSettings(FloristryRegistryKeys.BUBBLEBUD_KEY));
 	public static FlowerBlock FALSE_ROSE = new FlowerBlock(StatusEffects.REGENERATION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.FALSE_ROSE_KEY));
 	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.HERMIT_PURPLE_KEY));
@@ -34,6 +35,10 @@ public class FloristryBlocks {
 
 	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
 		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY);
+	}
+
+	public static Block.Settings createFlowerBedBlockSettings(RegistryKey<Block> key) {
+		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().sounds(BlockSoundGroup.PINK_PETALS).pistonBehavior(PistonBehavior.DESTROY);
 	}
 
 	public static Block.Settings createTallFlowerBlockSettings(RegistryKey<Block> key) {
