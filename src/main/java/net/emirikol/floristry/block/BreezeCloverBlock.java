@@ -1,10 +1,15 @@
 package net.emirikol.floristry.block;
 
+import net.emirikol.floristry.FloristryMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowerbedBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
@@ -28,5 +33,16 @@ public class BreezeCloverBlock extends FlowerbedBlock {
 				world.addParticle(ParticleTypes.CLOUD, d + random.nextDouble() / (double)5.0F, (double)pos.getY() + ((double)1.0F - random.nextDouble()), e + random.nextDouble() / (double)5.0F, 0.0F, 0.0F, 0.0F);
 			}
 		}
+	}
+
+	@Override
+	protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+		// Play a sound.
+		if (entity.fallDistance > 2 && world instanceof ServerWorld serverWorld) {
+			serverWorld.playSound(null, pos, SoundEvents.BLOCK_SPONGE_FALL, SoundCategory.BLOCKS, 0.5F, 0.8F);
+		}
+
+		// Cancel out velocity.
+		entity.fallDistance = 0;
 	}
 }
