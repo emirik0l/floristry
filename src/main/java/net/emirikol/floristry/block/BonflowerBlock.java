@@ -36,6 +36,5 @@ public class BonflowerBlock extends FlowerBlock implements MagicHoneyProvider {
 				world.addParticle(ParticleTypes.SMOKE, d + random.nextDouble() / (double)5.0F, (double)pos.getY() + ((double)0.5F - random.nextDouble()), e + random.nextDouble() / (double)5.0F, 0.0F, 0.0F, 0.0F);
 			}
 		}
-
 	}
 }
