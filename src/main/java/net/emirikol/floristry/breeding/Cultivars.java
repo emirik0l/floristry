@@ -109,6 +109,11 @@ public class Cultivars {
 			new Cultivar(FloristryBlocks.BONFLOWER, SPECIAL_PROPAGATE)
 	};
 
+	public static final Cultivar[] BREEZE_CLOVER = {
+			new Cultivar(FloristryBlocks.VIRIDELPHIA, FloristryBlocks.PATINA_FLOWER, FloristryBlocks.BREEZE_CLOVER, T2_MUTATE),
+			new Cultivar(FloristryBlocks.BREEZE_CLOVER, SPECIAL_PROPAGATE)
+	};
+
 	// Tier 3 flower breeding.
 	// TODO
 
@@ -130,6 +135,7 @@ public class Cultivars {
 		addAll(List.of(WITHER_BUSH));
 
 		addAll(List.of(BONFLOWER));
+		addAll(List.of(BREEZE_CLOVER));
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
