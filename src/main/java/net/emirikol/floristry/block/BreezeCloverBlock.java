@@ -1,11 +1,11 @@
 package net.emirikol.floristry.block;
 
-import net.emirikol.floristry.FloristryMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowerbedBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -29,7 +29,7 @@ public class BreezeCloverBlock extends FlowerbedBlock {
 		double e = (double)pos.getZ() + vec3d.z;
 
 		for(int i = 0; i < 3; ++i) {
-			if (random.nextFloat() <= 0.01F) {
+			if (random.nextFloat() <= (0.005F * state.get(FLOWER_AMOUNT))) {
 				world.addParticle(ParticleTypes.CLOUD, d + random.nextDouble() / (double)5.0F, (double)pos.getY() + ((double)1.0F - random.nextDouble()), e + random.nextDouble() / (double)5.0F, 0.0F, 0.0F, 0.0F);
 			}
 		}
@@ -40,6 +40,15 @@ public class BreezeCloverBlock extends FlowerbedBlock {
 		// Play a sound.
 		if (entity.fallDistance > 2 && world instanceof ServerWorld serverWorld) {
 			serverWorld.playSound(null, pos, SoundEvents.BLOCK_SPONGE_FALL, SoundCategory.BLOCKS, 0.5F, 0.8F);
+		}
+
+		// Bounce proportional to number of flowers.
+		if (entity.fallDistance > 0.0 && state.get(FLOWER_AMOUNT) > 1) {
+			Vec3d velocity = entity.getVelocity();
+			double bounce = (entity instanceof LivingEntity ? (double)1.0F : 0.4) * state.get(FLOWER_AMOUNT) * 0.3;
+			entity.setVelocity(velocity.x, bounce, velocity.z);
+			entity.velocityModified = true;
+			entity.velocityDirty = true;
 		}
 
 		// Cancel out velocity.
