@@ -14,10 +14,16 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 
 public class WitherBushBlock extends TallFlowerBlock {
 	public WitherBushBlock(AbstractBlock.Settings settings) {
 		super(settings);
+	}
+
+	@Override
+	public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
+		return false;
 	}
 
 	@Override

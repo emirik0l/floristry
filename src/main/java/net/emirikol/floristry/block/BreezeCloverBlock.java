@@ -17,6 +17,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 
 public class BreezeCloverBlock extends FlowerbedBlock implements MagicHoneyProvider {
 	public BreezeCloverBlock(AbstractBlock.Settings settings) {
@@ -26,6 +27,11 @@ public class BreezeCloverBlock extends FlowerbedBlock implements MagicHoneyProvi
 	@Override
 	public Item honeyItem() {
 		return FloristryItems.BREEZE_HONEY;
+	}
+
+	@Override
+	public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
+		return false;
 	}
 
 	@Override
