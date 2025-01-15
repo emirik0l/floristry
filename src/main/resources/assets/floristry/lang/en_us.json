@@ -34,5 +34,7 @@
   "item.floristry.wither_bush": "Wither Bush",
 
   "item.floristry.bonflower_honey": "Bonflower Honey",
-  "item.floristry.bonflower_honey.tooltip": "I can see the fire in your eyes!"
+  "item.floristry.bonflower_honey.tooltip": "I can see the fire in your eyes!",
+  "item.floristry.breeze_honey": "Breeze Honey",
+  "item.floristry.breeze_honey.tooltip": "Like walking on a cloud."
 }

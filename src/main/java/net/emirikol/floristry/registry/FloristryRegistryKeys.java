@@ -48,4 +48,5 @@ public class FloristryRegistryKeys {
 
 	// Honey Items
 	public static RegistryKey<Item> BONFLOWER_HONEY_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BONFLOWER_HONEY_ID);
+	public static RegistryKey<Item> BREEZE_HONEY_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BREEZE_HONEY_ID);
 }

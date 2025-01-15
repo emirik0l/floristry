@@ -22,6 +22,7 @@ public class FloristryItems {
 	public static BlockItem WITHER_BUSH_ITEM = new BlockItem(FloristryBlocks.WITHER_BUSH, createFlowerItemSettings(FloristryRegistryKeys.WITHER_BUSH_ITEM_KEY));
 
 	public static BonflowerHoneyItem BONFLOWER_HONEY = new BonflowerHoneyItem(createHoneySettings(FloristryRegistryKeys.BONFLOWER_HONEY_KEY));
+	public static BreezeHoneyItem BREEZE_HONEY = new BreezeHoneyItem(createHoneySettings(FloristryRegistryKeys.BREEZE_HONEY_KEY));
 
 	public static Item.Settings createFlowerItemSettings(RegistryKey<Item> key) {
 		return new Item.Settings().useBlockPrefixedTranslationKey().registryKey(key);
