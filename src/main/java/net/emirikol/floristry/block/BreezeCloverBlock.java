@@ -1,11 +1,13 @@
 package net.emirikol.floristry.block;
 
+import net.emirikol.floristry.item.FloristryItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowerbedBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -16,9 +18,14 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
 
-public class BreezeCloverBlock extends FlowerbedBlock {
+public class BreezeCloverBlock extends FlowerbedBlock implements MagicHoneyProvider {
 	public BreezeCloverBlock(AbstractBlock.Settings settings) {
 		super(settings);
+	}
+
+	@Override
+	public Item honeyItem() {
+		return FloristryItems.BREEZE_HONEY;
 	}
 
 	@Override
