@@ -17,5 +17,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/bonflower"
+  "random_sequence": "floristry:blocks/bonflower"
 }

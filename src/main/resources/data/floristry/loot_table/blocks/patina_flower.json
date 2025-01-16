@@ -17,5 +17,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/patina_flower"
+  "random_sequence": "floristry:blocks/patina_flower"
 }

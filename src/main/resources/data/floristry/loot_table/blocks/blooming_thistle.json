@@ -17,5 +17,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/blooming_thistle"
+  "random_sequence": "floristry:blocks/blooming_thistle"
 }

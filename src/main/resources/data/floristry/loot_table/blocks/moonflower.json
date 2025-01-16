@@ -26,5 +26,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/moonflower"
+  "random_sequence": "floristry:blocks/moonflower"
 }

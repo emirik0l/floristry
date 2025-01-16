@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "floristry:hermit_purple"
+          "name": "floristry:hearth_rose"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "floristry:blocks/hermit_purple"
+  "random_sequence": "floristry:blocks/hearth_rose"
 }
