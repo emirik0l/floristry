@@ -15,6 +15,7 @@ public class FloristryClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.BREEZE_CLOVER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.BUBBLEBUD, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.FALSE_ROSE, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.HEARTH_ROSE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.HERMIT_PURPLE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.MOONFLOWER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(FloristryBlocks.PATINA_FLOWER, RenderLayer.getCutout());
