@@ -30,6 +30,7 @@ public class FloristryBlocks {
 	public static FlowerPotBlock POTTED_BRANDFLOWER = new FlowerPotBlock(BRANDFLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BRANDFLOWER_KEY));
 	public static FlowerPotBlock POTTED_BUBBLEBUD = new FlowerPotBlock(BUBBLEBUD, createFlowerPotSettings(FloristryRegistryKeys.POTTED_BUBBLEBUD_KEY));
 	public static FlowerPotBlock POTTED_FALSE_ROSE = new FlowerPotBlock(FALSE_ROSE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_FALSE_ROSE_KEY));
+	public static FlowerPotBlock POTTED_HEARTH_ROSE = new FlowerPotBlock(HEARTH_ROSE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HEARTH_ROSE_KEY));
 	public static FlowerPotBlock POTTED_HERMIT_PURPLE = new FlowerPotBlock(HERMIT_PURPLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HERMIT_PURPLE_KEY));
 	public static FlowerPotBlock POTTED_PATINA_FLOWER = new FlowerPotBlock(PATINA_FLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_PATINA_FLOWER_KEY));
 	public static FlowerPotBlock POTTED_VIRIDELPHIA = new FlowerPotBlock(VIRIDELPHIA, createFlowerPotSettings(FloristryRegistryKeys.POTTED_VIRIDELPHIA_KEY));
