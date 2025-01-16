@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKey;
 
 public class FloristryItems {
+	// BlockItems
 	public static BlockItem AGLAOPHOTIS_ITEM = new BlockItem(FloristryBlocks.AGLAOPHOTIS, createFlowerItemSettings(FloristryRegistryKeys.AGLAOPHOTIS_ITEM_KEY));
 	public static BlockItem BLOOMING_THISTLE_ITEM = new BlockItem(FloristryBlocks.BLOOMING_THISTLE, createFlowerItemSettings(FloristryRegistryKeys.BLOOMING_THISTLE_ITEM_KEY));
 	public static BlockItem BONFLOWER_ITEM = new BlockItem(FloristryBlocks.BONFLOWER, createFlowerItemSettings(FloristryRegistryKeys.BONFLOWER_ITEM_KEY));
@@ -15,12 +16,14 @@ public class FloristryItems {
 	public static BlockItem BREEZE_CLOVER_ITEM = new BlockItem(FloristryBlocks.BREEZE_CLOVER, createFlowerItemSettings(FloristryRegistryKeys.BREEZE_CLOVER_ITEM_KEY));
 	public static BlockItem BUBBLEBUD_ITEM = new BlockItem(FloristryBlocks.BUBBLEBUD, createFlowerItemSettings(FloristryRegistryKeys.BUBBLEBUD_ITEM_KEY));
 	public static BlockItem FALSE_ROSE_ITEM = new BlockItem(FloristryBlocks.FALSE_ROSE, createFlowerItemSettings(FloristryRegistryKeys.FALSE_ROSE_ITEM_KEY));
+	public static BlockItem HEARTH_ROSE_ITEM = new BlockItem(FloristryBlocks.HEARTH_ROSE, createFlowerItemSettings(FloristryRegistryKeys.HEARTH_ROSE_ITEM_KEY));
 	public static BlockItem HERMIT_PURPLE_ITEM = new BlockItem(FloristryBlocks.HERMIT_PURPLE, createFlowerItemSettings(FloristryRegistryKeys.HERMIT_PURPLE_ITEM_KEY));
 	public static BlockItem MOONFLOWER_ITEM = new BlockItem(FloristryBlocks.MOONFLOWER, createFlowerItemSettings(FloristryRegistryKeys.MOONFLOWER_ITEM_KEY));
 	public static BlockItem PATINA_FLOWER_ITEM = new BlockItem(FloristryBlocks.PATINA_FLOWER, createFlowerItemSettings(FloristryRegistryKeys.PATINA_FLOWER_ITEM_KEY));
 	public static BlockItem VIRIDELPHIA_ITEM = new BlockItem(FloristryBlocks.VIRIDELPHIA, createFlowerItemSettings(FloristryRegistryKeys.VIRIDELPHIA_ITEM_KEY));
 	public static BlockItem WITHER_BUSH_ITEM = new BlockItem(FloristryBlocks.WITHER_BUSH, createFlowerItemSettings(FloristryRegistryKeys.WITHER_BUSH_ITEM_KEY));
 
+	// Honey
 	public static BonflowerHoneyItem BONFLOWER_HONEY = new BonflowerHoneyItem(createHoneySettings(FloristryRegistryKeys.BONFLOWER_HONEY_KEY));
 	public static BreezeHoneyItem BREEZE_HONEY = new BreezeHoneyItem(createHoneySettings(FloristryRegistryKeys.BREEZE_HONEY_KEY));
 

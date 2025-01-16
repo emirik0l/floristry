@@ -15,6 +15,7 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Block> BREEZE_CLOVER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.BREEZE_CLOVER_ID);
 	public static RegistryKey<Block> BUBBLEBUD_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.BUBBLEBUD_ID);
 	public static RegistryKey<Block> FALSE_ROSE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.FALSE_ROSE_ID);
+	public static RegistryKey<Block> HEARTH_ROSE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.HEARTH_ROSE_ID);
 	public static RegistryKey<Block> HERMIT_PURPLE_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.HERMIT_PURPLE_ID);
 	public static RegistryKey<Block> MOONFLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.MOONFLOWER_ID);
 	public static RegistryKey<Block> PATINA_FLOWER_KEY = RegistryKey.of(RegistryKeys.BLOCK, FloristryMod.PATINA_FLOWER_ID);
@@ -40,6 +41,7 @@ public class FloristryRegistryKeys {
 	public static RegistryKey<Item> BREEZE_CLOVER_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BREEZE_CLOVER_ID);
 	public static RegistryKey<Item> BUBBLEBUD_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.BUBBLEBUD_ID);
 	public static RegistryKey<Item> FALSE_ROSE_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.FALSE_ROSE_ID);
+	public static RegistryKey<Item> HEARTH_ROSE_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.HEARTH_ROSE_ID);
 	public static RegistryKey<Item> HERMIT_PURPLE_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.HERMIT_PURPLE_ID);
 	public static RegistryKey<Item> MOONFLOWER_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.MOONFLOWER_ID);
 	public static RegistryKey<Item> PATINA_FLOWER_ITEM_KEY = RegistryKey.of(RegistryKeys.ITEM, FloristryMod.PATINA_FLOWER_ID);

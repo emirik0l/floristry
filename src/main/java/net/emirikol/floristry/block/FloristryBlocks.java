@@ -16,6 +16,7 @@ public class FloristryBlocks {
 	public static BreezeCloverBlock BREEZE_CLOVER = new BreezeCloverBlock(createFlowerBedBlockSettings(FloristryRegistryKeys.BREEZE_CLOVER_KEY));
 	public static FlowerBlock BUBBLEBUD = new FlowerBlock(StatusEffects.WATER_BREATHING, 7.0F, createFlowerBlockSettings(FloristryRegistryKeys.BUBBLEBUD_KEY));
 	public static FlowerBlock FALSE_ROSE = new FlowerBlock(StatusEffects.REGENERATION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.FALSE_ROSE_KEY));
+	public static HearthRoseBlock HEARTH_ROSE = new HearthRoseBlock(createFlowerBlockSettings(FloristryRegistryKeys.HEARTH_ROSE_KEY));
 	public static FlowerBlock HERMIT_PURPLE = new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.HERMIT_PURPLE_KEY));
 	public static TallFlowerBlock MOONFLOWER = new MoonflowerBlock(createTallFlowerBlockSettings(FloristryRegistryKeys.MOONFLOWER_KEY));
 	public static FlowerBlock PATINA_FLOWER = new FlowerBlock(StatusEffects.JUMP_BOOST, 5.0F, createFlowerBlockSettings(FloristryRegistryKeys.PATINA_FLOWER_KEY));
