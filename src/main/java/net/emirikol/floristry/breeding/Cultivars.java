@@ -3,7 +3,6 @@ package net.emirikol.floristry.breeding;
 import net.emirikol.floristry.block.FloristryBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.command.argument.packrat.Cut;
 
 import java.util.*;
 
@@ -114,6 +113,11 @@ public class Cultivars {
 			new Cultivar(FloristryBlocks.BREEZE_CLOVER, SPECIAL_PROPAGATE)
 	};
 
+	public static final Cultivar[] HEARTH_ROSE = {
+			new Cultivar(FloristryBlocks.FALSE_ROSE, FloristryBlocks.WITHER_BUSH, FloristryBlocks.HEARTH_ROSE, T2_MUTATE),
+			new Cultivar(FloristryBlocks.HEARTH_ROSE, SPECIAL_PROPAGATE)
+	};
+
 	// Tier 3 flower breeding.
 	// TODO
 
@@ -136,6 +140,7 @@ public class Cultivars {
 
 		addAll(List.of(BONFLOWER));
 		addAll(List.of(BREEZE_CLOVER));
+		addAll(List.of(HEARTH_ROSE));
 	}};
 
 	public static List<Cultivar> getMatches(Block[] parents) {
