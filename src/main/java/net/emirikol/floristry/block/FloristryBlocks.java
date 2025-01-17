@@ -1,7 +1,10 @@
 package net.emirikol.floristry.block;
 
+import net.emirikol.floristry.block.entity.HearthRoseBlockEntity;
 import net.emirikol.floristry.registry.FloristryRegistryKeys;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.RegistryKey;
@@ -34,6 +37,9 @@ public class FloristryBlocks {
 	public static FlowerPotBlock POTTED_HERMIT_PURPLE = new FlowerPotBlock(HERMIT_PURPLE, createFlowerPotSettings(FloristryRegistryKeys.POTTED_HERMIT_PURPLE_KEY));
 	public static FlowerPotBlock POTTED_PATINA_FLOWER = new FlowerPotBlock(PATINA_FLOWER, createFlowerPotSettings(FloristryRegistryKeys.POTTED_PATINA_FLOWER_KEY));
 	public static FlowerPotBlock POTTED_VIRIDELPHIA = new FlowerPotBlock(VIRIDELPHIA, createFlowerPotSettings(FloristryRegistryKeys.POTTED_VIRIDELPHIA_KEY));
+
+	// Block Entities
+	public static BlockEntityType<HearthRoseBlockEntity> HEARTH_ROSE_ENTITY = FabricBlockEntityTypeBuilder.create(HearthRoseBlockEntity::new, HEARTH_ROSE).build(null);
 
 	public static Block.Settings createFlowerBlockSettings(RegistryKey<Block> key) {
 		return AbstractBlock.Settings.create().registryKey(key).mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY);

@@ -44,6 +44,7 @@ public class FloristryMod implements ModInitializer {
 	public static final boolean DEBUG_LOGGING = false;
 	public static final int FLOWER_PLACE_RANGE = 5;
 	public static final int FLOWER_SCAN_RANGE = 5;
+	public static final int FLOWER_EFFECT_RANGE = 10;
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -82,6 +83,8 @@ public class FloristryMod implements ModInitializer {
 		Registry.register(Registries.BLOCK, POTTED_HERMIT_PURPLE_ID, FloristryBlocks.POTTED_HERMIT_PURPLE);
 		Registry.register(Registries.BLOCK, POTTED_PATINA_FLOWER_ID, FloristryBlocks.POTTED_PATINA_FLOWER);
 		Registry.register(Registries.BLOCK, POTTED_VIRIDELPHIA_ID, FloristryBlocks.POTTED_VIRIDELPHIA);
+
+		Registry.register(Registries.BLOCK_ENTITY_TYPE, HEARTH_ROSE_ID, FloristryBlocks.HEARTH_ROSE_ENTITY);
 
 		Registry.register(Registries.ITEM, AGLAOPHOTIS_ID, FloristryItems.AGLAOPHOTIS_ITEM);
 		Registry.register(Registries.ITEM, BLOOMING_THISTLE_ID, FloristryItems.BLOOMING_THISTLE_ITEM);
